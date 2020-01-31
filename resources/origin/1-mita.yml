@@ -1,0 +1,41 @@
+id: 1
+kind: origin
+name: 三田本店
+prefecture: tokyo
+address: 港区三田2-16-4
+location:
+  lat: 35.64806
+  lng: 139.7416326
+opening_hours:
+  monday:
+    - start: '08:30'
+      end: '15:00'
+    - start: '17:00'
+      end: '20:00'
+  tuesday: 
+    - start: '08:30'
+      end: '15:00'
+    - start: '17:00'
+      end: '20:00'
+  wednesday: 
+    - start: '08:30'
+      end: '15:00'
+    - start: '17:00'
+      end: '20:00'
+  thursday: 
+    - start: '08:30'
+      end: '15:00'
+    - start: '17:00'
+      end: '20:00'
+  friday: 
+    - start: '08:30'
+      end: '15:00'
+    - start: '17:00'
+      end: '20:00'
+  saturday: 
+    - start: '08:30'
+      end: '15:00'
+    - start: '17:00'
+      end: '20:00'
+  sunday: []
+  holiday: []
