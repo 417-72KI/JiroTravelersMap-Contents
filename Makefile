@@ -1,3 +1,6 @@
-run:
-	alias yq="sudo docker run -i karlkfi/yq"
-	yq r resources/origin/1-mita.yml
+build:
+	docker build -t dev .
+
+run: build
+	docker run -v `pwd`:/work -w /work -i dev
+
