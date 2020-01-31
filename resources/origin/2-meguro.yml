@@ -1,0 +1,45 @@
+id: 2
+kind: origin
+name: 目黒店
+prefecture: tokyo
+address: 目黒区目黒3-7-2
+location:
+  lat: 35.6342079
+  lng: 139.7071068
+opening_hours:
+  monday:
+    - start: '12:00'
+      end: '16:00'
+    - start: '18:00'
+      end: '24:00'
+  tuesday:
+    - start: '12:00'
+      end: '16:00'
+    - start: '18:00'
+      end: '24:00'
+  wednesday: []
+  thursday:
+    - start: '12:00'
+      end: '16:00'
+    - start: '18:00'
+      end: '24:00'
+  friday:
+    - start: '12:00'
+      end: '16:00'
+    - start: '18:00'
+      end: '24:00'
+  saturday:
+    - start: '12:00'
+      end: '16:00'
+    - start: '18:00'
+      end: '24:00'
+  sunday:
+    - start: '12:00'
+      end: '16:00'
+    - start: '18:00'
+      end: '24:00'
+  holiday:
+    - start: '12:00'
+      end: '16:00'
+    - start: '18:00'
+      end: '24:00'
