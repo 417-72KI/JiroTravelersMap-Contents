@@ -1,7 +1,10 @@
 #!/bin/sh
 
-cd /work/resources/origin
+SRC='/work/resources/origin'
+DEST='/work/public/shop_list'
+
+cd ${SRC}
 files=$(ls)
 
-mkdir -p /work/output/shop_list
-yq -s -c '.' $files > /work/output/shop_list/origin.json
+mkdir -p ${DEST}
+yq -s -c '.' $files > "${DEST}/origin.json"

@@ -4,3 +4,5 @@ build:
 run: build
 	docker run -v `pwd`:/work -w /work -i dev
 
+deploy: run
+	firebase deploy
