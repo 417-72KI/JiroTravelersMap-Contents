@@ -6,6 +6,9 @@ address: 調布市仙川町1-10-17
 location:
   lat: 35.66179
   lng: 139.583876
+regular_holiday:
+  - sunday
+  - holiday
 opening_hours:
   monday:
     - start: '17:30'

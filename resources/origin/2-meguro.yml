@@ -6,6 +6,8 @@ address: 目黒区目黒3-7-2
 location:
   lat: 35.6342079
   lng: 139.7071068
+regular_holiday:
+  - wednesday
 opening_hours:
   monday:
     - start: '12:00'
