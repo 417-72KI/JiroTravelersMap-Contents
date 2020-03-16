@@ -14,7 +14,7 @@ struct Main: ParsableCommand {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let shops = try decoder.decode([Shop].self, from: data)
-        print(shops)
+        print(shops.map { $0.name })
     }
 
     static var configuration: CommandConfiguration {
