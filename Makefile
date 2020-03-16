@@ -1,8 +1,5 @@
-build:
-	@docker build -t dev .
-
-run: build
-	@docker run -v `pwd`:/work -w /work -i dev
+run: 
+	@docker-compose run --rm build
 
 deploy: run
 	@firebase deploy
