@@ -1,0 +1,35 @@
+id: 4
+kind: origin
+name: 新宿歌舞伎町店
+prefecture: tokyo
+address: 新宿区歌舞伎町2-37-5 日新ビル 1F
+location:
+  lat: 35.696157
+  lng: 139.701929
+regular_holiday:
+  - wednesday
+opening_hours:
+  monday:
+    - start: '11:30'
+      end: '27:00'
+  tuesday:
+    - start: '11:30'
+      end: '27:00'
+  wednesday: []
+  thursday:
+    - start: '11:30'
+      end: '27:00'
+  friday:
+    - start: '11:30'
+      end: '27:00'
+  saturday:
+    - start: '11:30'
+      end: '27:00'
+  sunday:
+    - start: '11:30'
+      end: '27:00'
+  holiday:
+    - start: '11:30'
+      end: '27:00'
+has_parking: false
+hard_noodle_enabled: true
