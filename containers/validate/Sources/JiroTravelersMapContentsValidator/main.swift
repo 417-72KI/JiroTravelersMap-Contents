@@ -13,8 +13,8 @@ struct Main: ParsableCommand {
         let data = try Data(contentsOf: path.url)
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let entity = try decoder.decode([Entity].self, from: data)
-        print(entity)
+        let shops = try decoder.decode([Shop].self, from: data)
+        print(shops)
     }
 
     static var configuration: CommandConfiguration {
