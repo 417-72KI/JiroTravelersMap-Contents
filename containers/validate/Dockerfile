@@ -9,3 +9,4 @@ RUN swift build -c release \
     && rm -rf .build
 
 ENTRYPOINT [ "jtmcvalidator" ]
+CMD [ "/work/public/shop_list/origin.json" ]
