@@ -7,3 +7,9 @@ services:
       - ./resources:/work/resources
       - ./public:/work/public
     working_dir: /work
+  validate:
+    build:
+      context: ./containers/validate
+    volumes:
+      - ./public:/work/public
+    working_dir: /work

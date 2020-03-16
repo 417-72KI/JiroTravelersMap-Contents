@@ -1,0 +1,5 @@
+Makefile
+firebase.json
+.gitignore
+.dockerignore
+README.md
