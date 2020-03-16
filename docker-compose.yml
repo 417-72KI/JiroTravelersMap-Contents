@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  build:
+    build:
+      context: ./containers/build
+    volumes:
+      - ./resources:/work/resources
+      - ./public:/work/public
+    working_dir: /work
