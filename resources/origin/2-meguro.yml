@@ -45,3 +45,5 @@ opening_hours:
       end: '16:00'
     - start: '18:00'
       end: '24:00'
+has_parking: false
+hard_noodle_enabled: true

@@ -42,3 +42,5 @@ opening_hours:
       end: '20:00'
   sunday: []
   holiday: []
+has_parking: false
+hard_noodle_enabled: true
