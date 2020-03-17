@@ -2,7 +2,7 @@ name: Deploy
 on:
   push: []
 jobs:
-  validate:
+  build_and_validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -12,8 +12,23 @@ jobs:
         run: docker-compose run --rm build
       - name: validate yml
         run: docker-compose run --rm validate
-      - uses: w9jds/firebase-action@v1
+      - name: upload artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: public
+          path: public
+  deploy:
+    needs: build_and_validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: download artifact
+        uses: actions/download-artifact@master
+        with:
+          name: public
+      - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
         env:
+          PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_NAME }}
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
