@@ -1,6 +1,6 @@
-name: Validate
+name: Deploy
 on:
-  pull_request: {}
+  push: []
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -12,3 +12,8 @@ jobs:
         run: docker-compose run --rm build
       - name: validate yml
         run: docker-compose run --rm validate
+      - uses: w9jds/firebase-action@v1
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
