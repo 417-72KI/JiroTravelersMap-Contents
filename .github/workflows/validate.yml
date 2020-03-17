@@ -1,0 +1,14 @@
+name: Validate
+on:
+  pull_request: {}
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build images
+        run: docker-compose build
+      - name: build yml
+        run: docker-compose run --rm build
+      - name: validate yml
+        run: docker-compose run --rm validate
