@@ -1,0 +1,12 @@
+name: Validate
+on:
+  pull_request: {}
+env:
+  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build
+        run: docker-compose build
