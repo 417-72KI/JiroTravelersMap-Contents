@@ -5,4 +5,5 @@ WORKDIR /work
 
 RUN npm i
 
-ENTRYPOINT [ "node", "index.js" ]
+ENTRYPOINT [ "npm", "start", "--" ]
+CMD [ "/work/resources/crawled" ]
