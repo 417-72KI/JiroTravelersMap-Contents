@@ -78,8 +78,8 @@ function parseLocationFromMapContent(body) {
     let lat = match[1];
     let lng = match[2];
     return {
-        lat: lat,
-        lng: lng
+        lat: parseFloat(lat),
+        lng: parseFloat(lng)
     }
 }
 
