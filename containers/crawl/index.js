@@ -70,8 +70,8 @@ async function execute(id, url) {
         prefecture: prefecture[address.prefecture],
         address: address.address,
         location: location,
-        regularHoliday: regularHoliday, 
-        openingHours: Object.values(day)
+        regular_holiday: regularHoliday, 
+        opening_hours: Object.values(day)
             .map(d => {
                 return { [d]: regularHoliday.includes(d) ? [] : openingHours } 
             }),
