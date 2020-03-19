@@ -1,3 +1,7 @@
+crawl:
+	@docker-compose build crawl
+	@docker-compose run --rm crawl
+
 container:
 	@docker-compose build build validate
 
