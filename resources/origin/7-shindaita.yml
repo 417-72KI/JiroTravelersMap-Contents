@@ -1,0 +1,43 @@
+id: 7
+kind: origin
+name: 環七新新代田店
+prefecture: tokyo
+address: 世田谷区代田5-29
+location:
+  lat: 35.6619043
+  lng: 139.6604156
+regular_holiday:
+  - monday
+opening_hours:
+  monday: []
+  tuesday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:00'
+  wednesday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:00'
+  thursday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:00'
+  friday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:00'
+  saturday:
+    - start: '11:00'
+      end: '15:00'
+  sunday:
+    - start: '11:00'
+      end: '15:00'
+  holiday:
+    - start: '11:00'
+      end: '15:00'
+has_parking: false
+hard_noodle_enabled: false
