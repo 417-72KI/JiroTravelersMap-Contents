@@ -71,11 +71,12 @@ async function execute(id, url) {
         address: address.address,
         location: location,
         regularHoliday: regularHoliday, 
-        openingHours: openingHours,
+        openingHours: Object.values(day).map(d => { return { [d]: openingHours } }),
         other: other
     };
+
     let fileName = id + '-' + name + '.yml';
-    fs.writeFileSync(outputDir + '/' + fileName, yaml.dump(obj));
+    fs.writeFileSync(outputDir + '/' + fileName, yaml.dump(obj, { noRefs: true }));
 }
 
 function parseAddressFromMapContent(body) {
@@ -117,12 +118,21 @@ function parseRegularHolidayFromContent(content) {
 }
 
 function parseOpeningHoursFromContent(content) {
-    let match = /(\d{1,2}：\d{1,2}(?:[^～]*?))～(\d{1,2}：\d{1,2}(?:[^\s\n].*?)).*?(\d{1,2}：\d{1,2}(?:[^～]*?))～(\d{1,2}：\d{1,2}(?:[^\s\n].*?))*/g.exec(content)
-        .slice(1)
-        .map(e => {
-            let match = /(\d{1,2})：(\d{1,2})/g.exec(e);
-            return `${match[1]}:${match[2]}`
-        });
-    return util.split(match, 2)
-        .map(e => { return { start: e[0], end: e[1] } });
+    var match = /(\d{1,2}：\d{1,2}(?:[^～]*?))～(\d{1,2}：\d{1,2}(?:[^\s\n].*?)).*?(\d{1,2}：\d{1,2}(?:[^～]*?))～(\d{1,2}：\d{1,2}(?:[^\s\n].*?))/g.exec(content)
+    if (!match) { 
+        match = /(\d{1,2}：\d{1,2}(?:[^～]*?))～(\d{1,2}：\d{1,2}(?:[^\s\n].*?))/g.exec(content)
+    }
+    if (!match) { return []; }
+    try {
+        let hours = match.slice(1)
+            .map(e => {
+                let match = /(\d{1,2})：(\d{1,2})/g.exec(e);
+                return `${match[1]}:${match[2]}`
+            });
+        return util.split(hours, 2)
+            .map(e => { return { start: e[0], end: e[1] } });
+    } catch (e) {
+        console.log(e);
+        return [];
+    }
 }
