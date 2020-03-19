@@ -71,7 +71,10 @@ async function execute(id, url) {
         address: address.address,
         location: location,
         regularHoliday: regularHoliday, 
-        openingHours: Object.values(day).map(d => { return { [d]: openingHours } }),
+        openingHours: Object.values(day)
+            .map(d => {
+                return { [d]: regularHoliday.includes(d) ? [] : openingHours } 
+            }),
         other: other
     };
 
