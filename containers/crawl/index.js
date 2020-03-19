@@ -1,5 +1,6 @@
 const client = require('cheerio-httpcli')
 const fs = require('fs')
+const yaml = require('js-yaml')
 
 const url = 'https://ramen-jiro.site/';
 
@@ -28,19 +29,14 @@ client.set('headers', { 'Accept-Language': 'ja' });
         console.log(res.error);
         return
     }
-    res.$('#gnavi .menu-item-1758 .sub-menu li a')
-        .each((idx, element) => {
-            try {
-                execute(idx + 1, element.attribs.href)
-            } catch (e) {
-                console.error(e);
-                return;
-            }
-        }
-    );
+    let p = res.$('#gnavi .menu-item-1758 .sub-menu li a')
+        .map((idx, element) => execute(idx + 1, element.attribs.href))
+        .get()
+    await Promise.all(p)
 })()
 
 async function execute(id, url) {
+    console.debug(url);
     let res = await client.fetch(url)
     if (res.error || !res.response || res.response.statusCode !== 200) {
         console.log(res.error);
@@ -69,8 +65,8 @@ async function execute(id, url) {
         location: location,
         other: other
     };
-    let fileName = id + '-' + name + '.json'
-    fs.writeFileSync(outputDir + '/' + fileName, JSON.stringify(obj, null, '    '))
+    let fileName = id + '-' + name + '.yml';
+    fs.writeFileSync(outputDir + '/' + fileName, yaml.dump(obj));
 }
 
 function parseAddressFromMapContent(body) {
