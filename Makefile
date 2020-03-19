@@ -1,11 +1,11 @@
-build:
-	@docker-compose build
+container:
+	@docker-compose build build validate
 
-run: build
+build: container
 	@docker-compose run --rm build
 
 validate: build
 	@docker-compose run --rm validate
 
-deploy: run validate
+deploy: build validate
 	@firebase deploy
