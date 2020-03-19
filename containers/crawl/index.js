@@ -72,12 +72,14 @@ async function execute(id, url) {
         location: location,
         regular_holiday: regularHoliday, 
         opening_hours: Object.values(day)
-            .map(d => {
-                return { [d]: regularHoliday.includes(d) ? [] : openingHours } 
-            }),
+            .map(d => { return { [d]: regularHoliday.includes(d) ? [] : openingHours } })
+            .reduce((result, current) => {
+                let key = Object.keys(current);
+                result[key] = current[key];
+                return result;
+            }, {}),
         other: other
     };
-
     let fileName = id + '-' + name + '.yml';
     fs.writeFileSync(outputDir + '/' + fileName, yaml.dump(obj, { noRefs: true }));
 }
@@ -114,7 +116,7 @@ async function parseMapContentFromURL(url) {
 function parseRegularHolidayFromContent(content) {
     let keys = Object.keys(day).join('');
     let match = content.split('\n')[0]
-        .replace(/定休日/g, '')
+        .replace(/定休日|曜日/g, '')
         .match(new RegExp(`[${keys}]`, 'g'));
     if (!match) { return []; }
     return match.map(e => day[e]);
