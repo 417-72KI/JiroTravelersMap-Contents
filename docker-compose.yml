@@ -13,3 +13,9 @@ services:
     volumes:
       - ./public:/work/public
     working_dir: /work
+  crawl:
+    build:
+      context: ./containers/crawl
+    volumes:
+      - ./resources:/work/resources
+    working_dir: /work

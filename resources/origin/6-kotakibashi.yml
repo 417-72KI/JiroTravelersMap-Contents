@@ -1,0 +1,36 @@
+id: 6
+kind: origin
+name: 新宿小滝橋通り店
+prefecture: tokyo
+address: 新宿区西新宿7-5-5
+location:
+  lat: 35.6963527
+  lng: 139.6983158
+regular_holiday: []
+opening_hours:
+  monday:
+    - start: '11:00'
+      end: '23:00'
+  tuesday:
+    - start: '11:00'
+      end: '23:00'
+  wednesday:
+    - start: '11:00'
+      end: '23:00'
+  thursday:
+    - start: '11:00'
+      end: '23:00'
+  friday:
+    - start: '11:00'
+      end: '23:00'
+  saturday:
+    - start: '11:00'
+      end: '23:00'
+  sunday:
+    - start: '11:00'
+      end: '23:00'
+  holiday:
+    - start: '11:00'
+      end: '23:00'
+has_parking: false
+hard_noodle_enabled: true
