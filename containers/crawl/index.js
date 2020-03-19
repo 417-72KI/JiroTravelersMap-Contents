@@ -64,6 +64,7 @@ async function execute(id, url) {
         .join("\n");
     let regularHoliday = parseRegularHolidayFromContent(other);
     let openingHours = parseOpeningHoursFromContent(other);
+    let parking = parseParkingFromContent(other);
     let obj = {
         id: id,
         name: name,
@@ -78,6 +79,8 @@ async function execute(id, url) {
                 result[key] = current[key];
                 return result;
             }, {}),
+        has_parking: parking,
+        hard_noodle_enabled: true,
         other: other
     };
     let fileName = id + '-' + name + '.yml';
@@ -140,4 +143,10 @@ function parseOpeningHoursFromContent(content) {
         console.log(e);
         return [];
     }
+}
+
+function parseParkingFromContent(content) {
+    let match = /駐車場：(なし|無|あり|有)/g.exec(content);
+    if (!match) { return false }
+    return ['有', 'あり'].includes(match[1])
 }
