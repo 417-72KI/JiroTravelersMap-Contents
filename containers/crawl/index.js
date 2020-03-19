@@ -20,6 +20,8 @@ try {
     fs.mkdirSync(outputDir);
 }
 
+client.set('headers', { 'Accept-Language': 'ja' });
+
 (async () => {
     let res = await client.fetch(url)
     if (res.error || !res.response || res.response.statusCode !== 200) {
@@ -28,8 +30,12 @@ try {
     }
     res.$('#gnavi .menu-item-1758 .sub-menu li a')
         .each((idx, element) => {
-            if (idx == 0) // debug
-            execute(idx + 1, element.attribs.href)
+            try {
+                execute(idx + 1, element.attribs.href)
+            } catch (e) {
+                console.error(e);
+                return;
+            }
         }
     );
 })()

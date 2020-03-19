@@ -1,4 +1,4 @@
-FROM node:13.10
+FROM node:12.9
 
 ADD . /work
 WORKDIR /work
