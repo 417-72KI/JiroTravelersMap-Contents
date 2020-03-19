@@ -1,6 +1,7 @@
 const client = require('cheerio-httpcli')
 const fs = require('fs')
 const yaml = require('js-yaml')
+const prefecture = require('./lib/prefecture')
 
 const url = 'https://ramen-jiro.site/';
 
@@ -61,7 +62,8 @@ async function execute(id, url) {
     let obj = {
         id: id,
         name: name,
-        address: address,
+        prefecture: prefecture[address.prefecture],
+        address: address.address,
         location: location,
         other: other
     };
@@ -70,7 +72,12 @@ async function execute(id, url) {
 }
 
 function parseAddressFromMapContent(body) {
-    return body.match(/(?<=")〒.*?(?=")/g).slice(-1).pop()
+    let address = body.match(/(?<=")〒.*?(?=")/g).slice(-1).pop()
+    let match = /〒(\d{3}-\d{4})\s*(.*?[都道府県])(.*)/g.exec(address)
+    return {
+        prefecture: match[2],
+        address: match[3]
+    }
 }
 
 function parseLocationFromMapContent(body) {
