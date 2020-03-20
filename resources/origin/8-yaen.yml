@@ -1,0 +1,46 @@
+id: 8
+name: 八王子野猿街道店２
+prefecture: tokyo
+address: 八王子市堀之内2-13-16
+location:
+  lat: 35.6294575
+  lng: 139.401367
+regular_holiday:
+  - monday
+opening_hours:
+  monday: []
+  tuesday:
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:00'
+      end: '22:00'
+  wednesday:
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:00'
+      end: '22:00'
+  thursday:
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:00'
+      end: '22:00'
+  friday:
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:00'
+      end: '22:00'
+  saturday:
+    - start: '11:00'
+      end: '15:00'
+    - start: '16:30'
+      end: '22:00'
+  sunday:
+    - start: '10:30'
+      end: '17:00'
+  holiday:
+    - start: '11:00'
+      end: '15:00'
+    - start: '16:30'
+      end: '22:00'
+has_parking: true
+hard_noodle_enabled: false
