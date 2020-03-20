@@ -7,4 +7,4 @@ cd ${SRC}
 files=$(ls)
 
 mkdir -p ${DEST}
-yq -s -c '.' $files > "${DEST}/origin.json"
+yq -s -c '.' $files | yq 'del(.[].other)' > "${DEST}/origin.json"
