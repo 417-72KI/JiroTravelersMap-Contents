@@ -4,6 +4,7 @@ struct Shop: Model, Identifiable {
     let id: Int
     let kind: Kind
     let name: String
+    let status: Status
     let prefecture: Prefecture
     let address: String
     let location: Location
@@ -24,6 +25,15 @@ extension Shop {
     enum Kind: String, Model {
         case origin
         case inspired
+    }
+}
+
+// MARK: -
+extension Shop {
+    enum Status: String, Model {
+        case open
+        case closed
+        case beforeOpen = "before_open"
     }
 }
 
