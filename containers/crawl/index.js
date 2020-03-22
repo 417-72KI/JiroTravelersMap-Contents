@@ -69,6 +69,7 @@ async function execute(id, url) {
         id: id,
         kind: 'origin',
         name: name,
+        status: 'open',
         prefecture: prefecture[address.prefecture],
         address: address.address,
         location: location,
