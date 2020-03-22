@@ -67,6 +67,7 @@ async function execute(id, url) {
     let parking = parseParkingFromContent(other);
     let obj = {
         id: id,
+        kind: 'origin',
         name: name,
         prefecture: prefecture[address.prefecture],
         address: address.address,
