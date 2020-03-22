@@ -1,6 +1,7 @@
 id: 33
 kind: origin
 name: 札幌店
+status: open
 prefecture: hokkaido
 address: 札幌市北区北6条西8-8-11
 location:

@@ -1,6 +1,7 @@
 id: 1
 kind: origin
 name: 三田本店
+status: open
 prefecture: tokyo
 address: 港区三田2-16-4
 location:

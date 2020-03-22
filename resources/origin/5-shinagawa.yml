@@ -1,6 +1,7 @@
 id: 5
 kind: origin
 name: 品川店
+status: open
 prefecture: tokyo
 address: 品川区北品川1-18-5
 location:

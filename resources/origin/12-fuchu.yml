@@ -1,6 +1,7 @@
 id: 12
 kind: origin
 name: 府中店
+status: open
 prefecture: tokyo
 address: 府中市宮西町1-15-5
 location:
