@@ -1,17 +1,21 @@
 id: 41
 kind: origin
 name: 千葉店
-status: before_open
+status: open
 prefecture: chiba
 address: 千葉市中央区中央1-7-8
 location:
   lat: 35.6105634
   lng: 140.1236034
 regular_holiday:
-  - monday
   - sunday
+  - holiday
 opening_hours:
-  monday: []
+  monday:
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:00'
+      end: '21:30'
   tuesday:
     - start: '11:00'
       end: '14:30'
@@ -41,9 +45,8 @@ opening_hours:
   holiday: []
 has_parking: false
 hard_noodle_enabled: true
+twitter: jiro_chiba
 other: |-
-  2020年4月19日10時OPEN！！ 初日限定100食
-  定休日　日曜日　不定休　祝日
-  11：00～14：30　17：00～21：30
-  料金不明
-  千葉市中央区中央1-7-8
+  ※当面整理券制（TW確認）
+  小　700円、小豚　850円、小W　１０００円,ミニ（麺半分・豚半分）　６００円,大　８００円、大豚　９５０円、大W　１１００円
+  両替機あり
