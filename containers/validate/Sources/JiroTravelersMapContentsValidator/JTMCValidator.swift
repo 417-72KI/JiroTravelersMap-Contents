@@ -1,6 +1,7 @@
 import Foundation
 import ArgumentParser
 import PathKit
+import JiroTravelersMapContentsValidatorCore
 
 @main
 struct JTMCValidator: ParsableCommand {
@@ -15,7 +16,7 @@ struct JTMCValidator: ParsableCommand {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let shops = try decoder.decode([Shop].self, from: data)
-        print(shops.map { $0.name })
+        print(shops.map(\.name))
     }
 
     static var configuration: CommandConfiguration {

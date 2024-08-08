@@ -1,6 +1,6 @@
 import Foundation
 
-enum Day: String, Model {
+public enum Day: String, Model {
     case monday
     case tuesday
     case wednesday
@@ -11,7 +11,7 @@ enum Day: String, Model {
     case holiday
 }
 
-extension Day {
+public extension Day {
     var stringValue: String {
         switch self {
         case .monday: return R.string.day.monday()

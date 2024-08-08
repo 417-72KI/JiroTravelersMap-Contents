@@ -19,13 +19,15 @@ let package = Package(
         .executableTarget(
             name: "JiroTravelersMapContentsValidator",
             dependencies: [
+                "JiroTravelersMapContentsValidatorCore",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 "PathKit"
             ]
         ),
+        .target(name: "JiroTravelersMapContentsValidatorCore"),
         .testTarget(
-            name: "JiroTravelersMapContentsValidatorTests",
-            dependencies: ["JiroTravelersMapContentsValidator"]
+            name: "JiroTravelersMapContentsValidatorCoreTests",
+            dependencies: ["JiroTravelersMapContentsValidatorCore"]
         ),
     ]
 )
