@@ -1,9 +1,9 @@
 id: 42
 kind: origin
-name: 大宮公園駅前店　6月5日オープン！
+name: 大宮公園駅前店
 status: open
 prefecture: saitama
-address: さいたま市大宮区寿能町1-24
+address: さいたま市大宮区寿能町1-24 前場ビル1階
 location:
   lat: 35.9225433
   lng: 139.6319198
