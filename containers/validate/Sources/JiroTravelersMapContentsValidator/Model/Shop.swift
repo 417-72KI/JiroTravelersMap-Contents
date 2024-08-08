@@ -31,7 +31,7 @@ extension Shop {
 // MARK: -
 extension Shop {
     enum Status: String, Model {
-        case open
+        case `open`
         case closed
         case beforeOpen = "before_open"
     }
