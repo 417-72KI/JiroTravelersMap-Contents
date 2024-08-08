@@ -1,0 +1,63 @@
+id: 35
+kind: origin
+name: JR西口蒲田店
+status: closed
+prefecture: tokyo
+address: 大田区西蒲田7-6-9
+location:
+  lat: 35.563733
+  lng: 139.7145765
+regular_holiday:
+  - monday
+  - sunday
+opening_hours:
+  monday: []
+  tuesday:
+    - start: '23:00'
+      end: '14:30'
+    - start: '18:00'
+      end: '23:00'
+  wednesday:
+    - start: '23:00'
+      end: '14:30'
+    - start: '18:00'
+      end: '23:00'
+  thursday:
+    - start: '23:00'
+      end: '14:30'
+    - start: '18:00'
+      end: '23:00'
+  friday:
+    - start: '23:00'
+      end: '14:30'
+    - start: '18:00'
+      end: '23:00'
+  saturday:
+    - start: '23:00'
+      end: '14:30'
+    - start: '18:00'
+      end: '23:00'
+  sunday: []
+  holiday:
+    - start: '23:00'
+      end: '14:30'
+    - start: '18:00'
+      end: '23:00'
+has_parking: false
+hard_noodle_enabled: true
+other: >-
+  令和元年１０月１１日で閉店
+
+  定休日 水
+
+  月〜金18：00～23：00頃
+
+  土・日・祝　11：00～14：30　18：00～23：00頃
+
+  小 730円、小ブタ 830円、小ダブル 950円,大 830円、大ブタ 930円、大ダブル 1050円
+
+  店員は、鶴見店（鶴見店が移転して蒲田店となった）店主と助手。,無。,レンゲ有。ティッシュ無。名刺無。,BGMは、80.0。,トッピングは、ニンニク、ヤサイ、アブラ、カラメ、トウガラシ。
+
+  小ブタ　ニンニクトウガラシ
+
+  麺は、平打ちストレート。柔らかめ。量は少なめ。,ぶたは、小ぶりで薄切りの＠ぶたが４枚。,スープは、微乳化気味でさめた感じのもの。,ヤサイは、モヤシ7：キャベツ3の割合。茹で具合は普通。,ニンニクは、小粒に刻まれたもの。

@@ -3,3 +3,5 @@ firebase.json
 .gitignore
 .dockerignore
 README.md
+resources
+public
