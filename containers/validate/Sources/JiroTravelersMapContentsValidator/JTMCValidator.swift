@@ -2,11 +2,12 @@ import Foundation
 import ArgumentParser
 import PathKit
 
-struct Main: ParsableCommand {
+@main
+struct JTMCValidator: ParsableCommand {
     @Argument(help: "File path")
     var jsonFilePath: String
 
-    func run() throws {
+    mutating func run() throws {
         let path = Path(jsonFilePath)
         guard path.exists else { throw Error.fileNotFound(path.absolute()) }
         guard path.isFile else { throw Error.directory(path.absolute()) }
@@ -21,5 +22,3 @@ struct Main: ParsableCommand {
         .init(commandName: "jtmcvalidator")
     }
 }
-
-Main.main()
