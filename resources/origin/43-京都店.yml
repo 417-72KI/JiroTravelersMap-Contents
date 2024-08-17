@@ -3,7 +3,7 @@ kind: origin
 name: 京都店
 status: open
 prefecture: kyoto
-address: 府京都市左京区一乗寺里ノ前町4
+address: 京都市左京区一乗寺里ノ前町4
 location:
   lat: 35.0438611
   lng: 135.7875109
