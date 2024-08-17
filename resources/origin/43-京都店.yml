@@ -9,30 +9,38 @@ location:
   lng: 135.7875109
 regular_holiday:
   - wednesday
-  - monday
-  - saturday
-  - sunday
-  - holiday
 opening_hours:
-  monday: []
+  monday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '18:00'
+      end: '21:30'
   tuesday:
     - start: '11:00'
       end: '14:00'
-    - start: '17:30'
-      end: '22:30'
+    - start: '18:00'
+      end: '21:30'
   wednesday: []
   thursday:
     - start: '11:00'
       end: '14:00'
-    - start: '17:30'
-      end: '22:30'
+    - start: '18:00'
+      end: '21:30'
   friday:
     - start: '11:00'
       end: '14:00'
+    - start: '18:00'
+      end: '21:30'
+  saturday:
+    - start: '11:00'
+      end: '14:30'
     - start: '17:30'
-      end: '22:30'
-  saturday: []
-  sunday: []
+      end: '21:30'
+  sunday:
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:30'
+      end: '20:30'
   holiday: []
 has_parking: false
 hard_noodle_enabled: true
