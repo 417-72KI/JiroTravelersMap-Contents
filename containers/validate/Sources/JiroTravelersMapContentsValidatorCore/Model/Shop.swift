@@ -20,6 +20,11 @@ public extension Shop {
     }
 }
 
+// MARK: - CustomStringConvertible
+extension Shop: CustomStringConvertible {
+    public var description: String { "\(id): \(name)".appending(status == .closed ? "(閉店)" : "") }
+}
+
 // MARK: -
 public extension Shop {
     enum Kind: String, Model {

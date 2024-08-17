@@ -1,0 +1,51 @@
+id: 29
+kind: origin
+name: 大宮店
+status: closed
+prefecture: saitama
+address: さいたま市大宮区下町1-25
+location:
+  lat: 35.9034574
+  lng: 139.6261448
+regular_holiday: []
+opening_hours:
+  monday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '22:00'
+  tuesday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '22:00'
+  wednesday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '22:00'
+  thursday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '22:00'
+  friday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '22:00'
+  saturday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '22:00'
+  sunday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '22:00'
+  holiday: []
+has_parking: false
+hard_noodle_enabled: true
+other: >-
+  閉店。旧XMLよりサルベージ

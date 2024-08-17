@@ -13,7 +13,7 @@ const prefectures = {
     chiba: "千葉県",
     tokyo: "東京都",
     kanagawa: "神奈川県",
-    niigata: "新潟県",
+    nigata: "新潟県",
     toyama: "富山県",
     ishikawa: "石川県",
     fukui: "福井県",

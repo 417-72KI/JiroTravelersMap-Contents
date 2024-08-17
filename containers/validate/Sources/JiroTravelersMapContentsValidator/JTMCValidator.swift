@@ -16,7 +16,7 @@ struct JTMCValidator: ParsableCommand {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let shops = try decoder.decode([Shop].self, from: data)
-        print(shops.map(\.name))
+        print(shops)
     }
 
     static var configuration: CommandConfiguration {
