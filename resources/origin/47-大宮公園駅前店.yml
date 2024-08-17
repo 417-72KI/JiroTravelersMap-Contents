@@ -1,0 +1,59 @@
+id: 47
+kind: origin
+name: 大宮公園駅前店
+status: open
+prefecture: saitama
+address: さいたま市大宮区寿能町1-24 前場ビル1階
+location:
+  lat: 35.9225433
+  lng: 139.6319198
+regular_holiday:
+  - wednesday
+  - sunday
+opening_hours:
+  monday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:30'
+  tuesday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:30'
+  wednesday: []
+  thursday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:30'
+  friday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:30'
+  saturday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:30'
+  sunday: []
+  holiday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:30'
+has_parking: false
+hard_noodle_enabled: true
+other: >-
+  定休日　水曜日,通常　11：00～14：00　17：00～20：30,日曜日 11:00~15:00
+
+  ※整理券方式　昼の部10:30~　夜の部１６：３０〜整理券配布,席数12席間仕切り営業
+
+  小ラーメン（麺約250g）　750円,小ぶたラーメン（麺約250g）　850円,大ラーメン（麺約400g）　850円,大ぶたラーメン（麺約400g）　950円
+
+  店主は旧ラーメン二郎大宮店店主の弟さん
+
+  令和2年6月25日更新
+
+  住所：埼玉県さいたま市大宮区寿能町1-24前場ビル1-À

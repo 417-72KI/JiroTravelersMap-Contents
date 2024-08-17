@@ -40,7 +40,7 @@ enum R {
             static func chiba() -> String { "千葉県" }
             static func tokyo() -> String { "東京都" }
             static func kanagawa() -> String { "神奈川県" }
-            static func niigata() -> String { "新潟県" }
+            static func nigata() -> String { "新潟県" }
             static func toyama() -> String { "富山県" }
             static func ishikawa() -> String { "石川県" }
             static func fukui() -> String { "福井県" }

@@ -1,0 +1,71 @@
+id: 50
+kind: origin
+name: 柏店
+status: open
+prefecture: chiba
+address: 柏市十余二249-5 MEM柏1F
+location:
+  lat: 35.8822046
+  lng: 139.9591994
+google_map: https://maps.app.goo.gl/TqfVq7MJQbe7tJ197
+regular_holiday:
+  - monday
+opening_hours:
+  monday: []
+  tuesday:
+    - start: '11:00'
+      end: '15:00'
+    - start: '17:30'
+      end: '21:30'
+  wednesday:
+    - start: '11:00'
+      end: '15:00'
+    - start: '17:30'
+      end: '21:30'
+  thursday:
+    - start: '11:00'
+      end: '15:00'
+    - start: '17:30'
+      end: '21:30'
+  friday:
+    - start: '11:00'
+      end: '15:00'
+    - start: '17:30'
+      end: '21:30'
+  saturday:
+    - start: '11:00'
+      end: '15:00'
+    - start: '17:30'
+      end: '21:30'
+  sunday:
+    - start: '11:00'
+      end: '15:00'
+    - start: '17:30'
+      end: '21:30'
+  holiday:
+    - start: '11:00'
+      end: '15:00'
+    - start: '17:30'
+      end: '21:30'
+has_parking: true
+hard_noodle_enabled: true
+other: >-
+  小ラーメン 900円
+  小ラーメン 麺少なめ 850円
+  小ラーメン 麺半分 800円
+  大ラーメン 950円
+  つけ麺変更券（トマト味orごま味） 100円
+  豚増し券 150円
+  豚ほぐし 100円
+  生卵 50円
+  うずら玉子4コ 100円
+  お持ち帰り 豚ほぐし一袋 500円
+  お持ち帰り 生麺一袋 100円
+
+  旧ラーメン二郎茨城守谷店が柏に移転して出来たお店。店主、助手含め5人程。中々のオペ人数
+
+  卓上香辛料は白こしょうと一味唐辛子
+
+  レンゲとエコ箸は給水機の横にあるが、席上にも割り箸がある。
+
+  ティッシュ無し、名刺無し、BGM無し。トッピングは二郎標準。

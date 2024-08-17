@@ -1,0 +1,38 @@
+id: 29
+kind: origin
+name: 新小金井街道店
+status: closed
+prefecture: tokyo
+address: 小金井市貫井北町3-5-7
+location:
+  lat: 35.70842
+  lng: 139.4960079
+regular_holiday:
+  - monday
+opening_hours:
+  monday:
+    - start: '17:00'
+      end: '24:00'
+  tuesday:
+    - start: '17:00'
+      end: '24:00'
+  wednesday:
+    - start: '17:00'
+      end: '24:00'
+  thursday:
+    - start: '17:00'
+      end: '24:00'
+  friday:
+    - start: '17:00'
+      end: '24:00'
+  saturday:
+    - start: '12:00'
+      end: '23:00'
+  sunday:
+    - start: '12:00'
+      end: '19:00'
+  holiday: []
+has_parking: false
+hard_noodle_enabled: true
+other: >-
+  閉店。旧XMLよりサルベージ

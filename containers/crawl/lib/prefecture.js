@@ -13,7 +13,7 @@ module.exports = {
     '千葉県': 'chiba',
     '東京都': 'tokyo',
     '神奈川県': 'kanagawa',
-    '新潟県': 'niigata',
+    '新潟県': 'nigata',
     '富山県': 'toyama',
     '石川県': 'ishikawa',
     '福井県': 'fukui',

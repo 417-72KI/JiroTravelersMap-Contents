@@ -15,7 +15,7 @@ public enum Prefecture: String, Model {
     case chiba
     case tokyo
     case kanagawa
-    case niigata
+    case nigata
     case toyama
     case ishikawa
     case fukui
@@ -67,7 +67,7 @@ extension Prefecture {
         case .chiba: R.string.prefecture.chiba()
         case .tokyo: R.string.prefecture.tokyo()
         case .kanagawa: R.string.prefecture.kanagawa()
-        case .niigata: R.string.prefecture.niigata()
+        case .nigata: R.string.prefecture.nigata()
         case .toyama: R.string.prefecture.toyama()
         case .ishikawa: R.string.prefecture.ishikawa()
         case .fukui: R.string.prefecture.fukui()

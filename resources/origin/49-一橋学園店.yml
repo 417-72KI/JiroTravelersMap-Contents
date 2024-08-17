@@ -1,0 +1,60 @@
+id: 49
+kind: origin
+name: 一橋学園店
+status: open
+prefecture: tokyo
+address: 小平市学園西町2-13-4
+location:
+  lat: 35.7223706
+  lng: 139.4792776
+google_map: https://maps.app.goo.gl/oh3ZReSuHSULzNEL9
+regular_holiday:
+  - thursday
+opening_hours:
+  monday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:30'
+      end: '20:30'
+  tuesday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:30'
+      end: '20:30'
+  wednesday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:30'
+      end: '20:30'
+  thursday: []
+  friday:
+    - start: '11:00'
+      end: '14:00'
+    - start: '17:30'
+      end: '20:30'
+  saturday:
+    - start: '11:00'
+      end: '15:00'
+    - start: '17:30'
+      end: '20:30'
+  sunday:
+    - start: '11:00'
+      end: '16:00'
+  holiday: []
+has_parking: false
+hard_noodle_enabled: true
+other: >-
+  小ラーメン 850円
+  小ブタ 1000円
+  大ラーメン 900円
+  大ブタ 1050円
+
+  店員は神保町店出身の若手の店主と、助手とバイト。
+
+  この日は、最近入ったアルバイトの女の子助手を別の助手が指導していた。
+
+  調味料は粉コショウ、粗びき一味唐辛子、しょうゆダレ。
+
+  割り箸のみ、レンゲあり、ティッシュあり。
+
+  BGMはFMヨコハマ。トッピングは二郎標準だが、マシにするとヤサイは結構盛られる。
