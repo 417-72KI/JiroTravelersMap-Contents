@@ -1,18 +1,18 @@
 name: Deploy
 on:
   push: 
-    branches: [master]
+    branches: [main]
 jobs:
   build_and_validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: build yml
-        run: docker-compose run --rm build
+        run: docker compose run --rm build
       - name: validate yml
-        run: docker-compose run --rm validate
+        run: docker compose run --rm validate
       - name: upload artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4
         with:
           name: public
           path: public
@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: download artifact
-        uses: actions/download-artifact@master
+        uses: actions/download-artifact@v4
         with:
           name: public
       - uses: w9jds/firebase-action@master
