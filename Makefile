@@ -1,10 +1,5 @@
 .SILENT:
 
-crawl:
-	# npm --prefix containers/crawl start ../../resources/crawled
-	docker-compose build crawl
-	docker-compose run --rm crawl
-
 container:
 	docker-compose build build validate
 
