@@ -7,7 +7,7 @@ window.onload = async () => {
     }
     document.getElementById('shop-name').innerText = shopName;
     document.title = shopName;
-    const address = prefectures[data.prefecture] + data.address + `\n(lat: ${data.location.lat}, lng: ${data.location.lng})`;
+    const address = prefectures[data.prefecture] + data.address + ` (${data.location.lat}, ${data.location.lng})`;
     if (data.google_map) {
         document.getElementById('address').innerHTML = `<a href="${data.google_map}" target="_blank">${address}</a>`;
     } else {
