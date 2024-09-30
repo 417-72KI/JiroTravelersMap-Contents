@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>プライバシーポリシー</title>
+  <meta name="description" content="ラーメン二郎行脚マップ">
+  
+  <!-- bootstrap -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" rel="stylesheet">
+  
+  <script type="text/javascript" src="js/marked.min.js"></script>
+  <script>
+    window.onload = () => {
+      var target = document.querySelector("#markdown_content");
+      var req = new XMLHttpRequest();
+      req.onreadystatechange = function() {
+        var result = document.getElementById('result');
+        if (req.readyState == 4) { // 通信の完了時
+          if (req.status == 200) { // 通信の成功時
+            target.innerHTML = marked(req.responseText);
+          } else {
+            target.innerHTML = "This content failed to load.";
+          }
+        } else {
+          target.innerHTML = "Loading...";
+        }
+      }
+      req.open('GET', target.attributes["src"].value, true);
+      req.send(null);
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Content -->
+  <div class="container">
+    <div id="markdown_content" src="./privacy.md"> </div>
+  </div>
+</body>
+</html>
