@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: build yml
+      - name: build json from yml
         run: docker compose run --rm build
-      - name: validate yml
+      - name: validate json
         run: docker compose run --rm validate
