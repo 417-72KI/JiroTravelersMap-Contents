@@ -1,4 +1,4 @@
-// swift-tools-version:5.10
+// swift-tools-version:6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.5.0"),
-        .package(url: "https://github.com/kylef/PathKit.git", from: "1.0.0"),
+        .package(url: "https://github.com/kylef/PathKit.git", from: "1.0.1"),
     ],
     targets: [
         .executableTarget(

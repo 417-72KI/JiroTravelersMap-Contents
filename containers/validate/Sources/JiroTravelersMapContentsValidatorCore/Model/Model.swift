@@ -1,6 +1,6 @@
 import Foundation
 
-protocol Model: Decodable, Hashable {
+protocol Model: Decodable, Hashable, Sendable {
 }
 
 public protocol Identifiable {

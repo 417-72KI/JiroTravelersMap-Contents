@@ -31,7 +31,6 @@ struct JTMCValidator: ParsableCommand {
             throw Error.conflictNames(conflictingNames)
         }
 
-
         print(shops)
     }
 
