@@ -1,6 +1,6 @@
 name: Deploy
 on:
-  push: 
+  push:
     branches: [main]
   workflow_dispatch:
 jobs:
@@ -8,6 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: |
+            containers/validate/.build/artifacts
+            containers/validate/.build/checkouts
+            containers/validate/.build/repositories
+          key: ${{ runner.os }}-swift-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-swift-
+            ${{ runner.os }}-
       - name: build yml
         run: docker compose run --rm build
       - name: validate yml
