@@ -1,0 +1,43 @@
+id: 52
+kind: origin
+name: 朝倉街道駅前店
+status: open
+prefecture: fukuoka
+address: 筑紫野市針摺中央2-17-8
+location:
+  lat: 33.4844682
+  lng: 130.5335196
+google_map: https://maps.app.goo.gl/RgzWhJyCMHs3r72U6
+regular_holiday:
+  - wednesday
+opening_hours:
+  monday:
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:30'
+      end: '20:30'
+  tuesday:
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:30'
+      end: '20:30'
+  wednesday: 
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:30'
+      end: '20:30'
+  thursday: []
+  friday:
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:30'
+      end: '20:30'
+  saturday: []
+  sunday: []
+  holiday:
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:30'
+      end: '20:30'
+has_parking: false
+hard_noodle_enabled: false
