@@ -10,6 +10,7 @@ public struct Shop: Model, Identifiable {
     public let location: Location
     public let regularHoliday: [Day]
     public let openingHours: OpeningHours
+    public let twitter: String?
 }
 
 public extension Shop {
@@ -60,6 +61,26 @@ extension Shop.OpeningHours {
     var today: [Time]? { forDate(Date()) }
 }
 
+public extension Shop.OpeningHours {
+    func forDay(_ day: Day) -> (Day, [Time])? {
+        let time = switch day {
+        case .monday: monday
+        case .tuesday: tuesday
+        case .wednesday: wednesday
+        case .thursday: thursday
+        case .friday: friday
+        case .saturday: saturday
+        case .sunday: sunday
+        case .holiday: holiday
+        }
+        return if let time, !time.isEmpty {
+            (day, time)
+        } else {
+            nil
+        }
+    }
+}
+
 extension Shop.OpeningHours {
     func forDate(_ date: Date) -> [Time]? {
         var calendar = Calendar.current
@@ -79,7 +100,7 @@ extension Shop.OpeningHours {
 }
 
 // MARK: -
-extension Shop.OpeningHours {
+public extension Shop.OpeningHours {
     struct Time: Model {
         let start: String
         let end: String
@@ -91,7 +112,7 @@ extension Shop.OpeningHours.Time {
 }
 
 extension Shop.OpeningHours.Time: CustomStringConvertible {
-    var description: String { stringValue }
+    public var description: String { stringValue }
 }
 
 extension Array where Element == Shop.OpeningHours.Time {

@@ -16,6 +16,16 @@ struct JTMCValidator: ParsableCommand {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let shops = try decoder.decode([Shop].self, from: data)
+
+        var validationError = ValidationError()
+
+        let invalidHours = shops.lazy
+            .map { ($0, $0.regularHoliday.compactMap($0.openingHours.forDay(_:))) }
+            .filter { $0.status != .closed && !$1.isEmpty } as Array
+        if !invalidHours.isEmpty {
+            validationError.append(Error.invalidHours(invalidHours))
+        }
+
         let combination = shops.indices.flatMap {
             let shop = shops[$0]
             return shops.indices.dropFirst($0 + 1).map {
@@ -23,12 +33,15 @@ struct JTMCValidator: ParsableCommand {
             }
         }
         let conflictingIds = combination.filter { $0.id == $1.id }
-        guard conflictingIds.isEmpty else {
-            throw Error.conflictIds(conflictingIds)
+        if !conflictingIds.isEmpty {
+            validationError.append(Error.conflictIds(conflictingIds))
         }
         let conflictingNames = combination.filter { $0.name == $1.name }
-        guard conflictingNames.isEmpty else {
-            throw Error.conflictNames(conflictingNames)
+        if !conflictingNames.isEmpty {
+            validationError.append(Error.conflictNames(conflictingNames))
+        }
+        guard validationError.isEmpty else {
+            throw validationError
         }
 
         print(shops)
