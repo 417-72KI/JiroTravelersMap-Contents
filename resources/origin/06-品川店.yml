@@ -12,36 +12,31 @@ regular_holiday:
   - holiday
 opening_hours:
   monday:
-    - start: '11:00'
-      end: '14:30'
-    - start: '17:00'
-      end: '21:00'
+    - start: '10:00'
+      end: '14:00'
   tuesday:
-    - start: '11:00'
-      end: '14:30'
+    - start: '10:00'
+      end: '14:00'
     - start: '17:00'
       end: '21:00'
   wednesday:
-    - start: '11:00'
-      end: '14:30'
+    - start: '10:00'
+      end: '14:00'
     - start: '17:00'
       end: '21:00'
   thursday:
-    - start: '11:00'
-      end: '14:30'
-    - start: '17:00'
-      end: '21:00'
+    - start: '10:00'
+      end: '14:00'
   friday:
-    - start: '11:00'
-      end: '14:30'
+    - start: '10:00'
+      end: '14:00'
     - start: '17:00'
       end: '21:00'
   saturday:
-    - start: '11:00'
-      end: '14:30'
-    - start: '17:00'
-      end: '21:00'
+    - start: '10:00'
+      end: '14:00'
   sunday: []
   holiday: []
 has_parking: false
 hard_noodle_enabled: true
+twitter: shinagawa26
