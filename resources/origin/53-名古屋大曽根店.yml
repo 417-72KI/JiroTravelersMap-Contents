@@ -9,7 +9,7 @@ location:
   lng: 136.94194864556488
 google_map: https://maps.app.goo.gl/sfb9NpQQTEvrQAuw7
 regular_holiday:
-  - thursday
+  - sunday
 opening_hours:
   monday:
     - start: '11:00'
@@ -40,7 +40,9 @@ opening_hours:
     - start: '10:00'
       end: '16:00'
   sunday: []
-  holiday: []
+  holiday:
+    - start: '10:00'
+      end: '16:00'
 has_parking: false
 hard_noodle_enabled: false
 twitter: jiro_NGY
