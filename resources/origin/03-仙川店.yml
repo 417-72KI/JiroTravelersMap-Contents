@@ -12,24 +12,26 @@ regular_holiday:
   - holiday
 opening_hours:
   monday:
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
   tuesday:
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
   wednesday:
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
   thursday:
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
   friday:
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
   saturday:
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
   sunday: []
   holiday: []
 has_parking: false
 hard_noodle_enabled: true
+twitter: senjiro26
+last_update: 2026/01/06
