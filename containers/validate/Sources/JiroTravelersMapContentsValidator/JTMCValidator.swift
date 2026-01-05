@@ -15,6 +15,11 @@ struct JTMCValidator: ParsableCommand {
         let data = try Data(contentsOf: path.url)
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .formatted(DateFormatter().apply {
+            $0.locale = Locale(identifier: "ja_JP")
+            $0.timeZone = TimeZone(identifier: "Asia/Tokyo")
+            $0.dateFormat = "yyyy/MM/dd"
+        })
         let shops = try decoder.decode([Shop].self, from: data)
 
         var validationError = ValidationError()
@@ -44,7 +49,11 @@ struct JTMCValidator: ParsableCommand {
             throw validationError
         }
 
-        print(shops)
+        print(
+            shops.map {
+                "\($0), Twitter: \($0.twitter.map { "`\($0)`" }, default: "(null)"), Last Update: \($0.lastUpdate, default: "<unknown>")"
+            }.joined(separator: "\n")
+        )
     }
 
     static var configuration: CommandConfiguration {

@@ -11,6 +11,7 @@ public struct Shop: Model, Identifiable {
     public let regularHoliday: [Day]
     public let openingHours: OpeningHours
     public let twitter: String?
+    public let lastUpdate: Date?
 }
 
 public extension Shop {
