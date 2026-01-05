@@ -35,10 +35,12 @@ opening_hours:
     - start: '11:00'
       end: '20:00'
   sunday:
-    - start: '09:00'
-      end: '16:00'
+    - start: '08:00'
+      end: '15:00'
   holiday:
     - start: '11:00'
       end: '20:00'
-has_parking: false
+has_parking: true
 hard_noodle_enabled: true
+twitter: Jiro_Yaenkaido2
+last_update: 2026/01/06
