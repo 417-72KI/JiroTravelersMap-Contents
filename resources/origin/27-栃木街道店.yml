@@ -9,8 +9,6 @@ location:
   lng: 139.7949175
 regular_holiday:
   - sunday
-  - holiday
-  - sunday
 opening_hours:
   monday:
     - start: '11:30'
@@ -39,10 +37,10 @@ opening_hours:
       end: '21:00'
   saturday:
     - start: '11:30'
-      end: '14:45'
-    - start: '18:00'
-      end: '21:00'
+      end: '16:00'
   sunday: []
   holiday: []
 has_parking: true
 hard_noodle_enabled: true
+twitter: Tochigikaidoten
+last_update: 2026/01/06

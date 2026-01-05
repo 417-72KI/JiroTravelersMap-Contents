@@ -12,43 +12,42 @@ opening_hours:
   monday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
   tuesday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
   wednesday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
   thursday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
   friday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
   saturday:
     - start: '11:00'
       end: '14:30'
     - start: '17:30'
-      end: '21:30'
+      end: '21:00'
   sunday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
-      end: '21:30'
   holiday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:00'
+      end: '21:00'
 has_parking: false
 hard_noodle_enabled: true
 twitter: jiro_kame
+last_update: 2026/01/06

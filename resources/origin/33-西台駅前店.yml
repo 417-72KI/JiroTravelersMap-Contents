@@ -3,45 +3,45 @@ kind: origin
 name: 西台駅前店
 status: open
 prefecture: tokyo
-address: 板橋区蓮根3-9-7
+address: 板橋区蓮根3-9-7 メトロード西台
 location:
   lat: 35.7868703
   lng: 139.6747901
 regular_holiday:
   - sunday
-  - holiday
 opening_hours:
   monday:
-    - start: '11:00'
+    - start: '10:15'
       end: '13:30'
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:15'
+      end: '20:30'
   tuesday:
-    - start: '11:00'
+    - start: '10:15'
       end: '13:30'
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:15'
+      end: '20:30'
   wednesday:
-    - start: '11:00'
+    - start: '10:15'
       end: '13:30'
-    - start: '17:30'
-      end: '21:30'
   thursday:
-    - start: '11:00'
+    - start: '10:15'
       end: '13:30'
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:15'
+      end: '20:30'
   friday:
-    - start: '11:00'
+    - start: '10:15'
       end: '13:30'
-    - start: '17:30'
-      end: '21:30'
+    - start: '17:15'
+      end: '20:30'
   saturday:
-    - start: '11:00'
-      end: '13:30'
-    - start: '17:30'
-      end: '21:30'
+    - start: '09:15'
+      end: '14:00'
   sunday: []
-  holiday: []
+  holiday:
+    - start: '10:15'
+      end: '13:30'
 has_parking: false
-hard_noodle_enabled: true
+hard_noodle_enabled: false
+has_spoon: false
+twitter: jiro_nishidai
+last_update: 2026/01/06

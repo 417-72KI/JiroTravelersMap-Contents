@@ -17,13 +17,9 @@ opening_hours:
   tuesday:
     - start: '10:00'
       end: '14:00'
-    - start: '17:00'
-      end: '21:00'
   wednesday:
     - start: '10:00'
       end: '14:00'
-    - start: '17:00'
-      end: '21:00'
   thursday:
     - start: '10:00'
       end: '14:00'
@@ -40,3 +36,4 @@ opening_hours:
 has_parking: false
 hard_noodle_enabled: true
 twitter: shinagawa26
+last_update: 2026/01/06
