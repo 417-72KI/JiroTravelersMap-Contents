@@ -1,7 +1,8 @@
 id: 36
 kind: origin
 name: 仙台店
-status: open
+status: closed
+new_id: 54
 prefecture: miyagi
 address: 仙台市青葉区立町2-8
 location:
@@ -51,3 +52,4 @@ opening_hours:
       end: '21:00'
 has_parking: false
 hard_noodle_enabled: true
+last_update: 2026/01/11
