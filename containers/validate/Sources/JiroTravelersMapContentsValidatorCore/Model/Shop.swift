@@ -5,6 +5,8 @@ public struct Shop: Model, Identifiable {
     public let kind: Kind
     public let name: String
     public let status: Status
+    public let oldId: Int?
+    public let newId: Int?
     public let prefecture: Prefecture
     public let address: String
     public let location: Location

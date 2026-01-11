@@ -12,39 +12,41 @@ regular_holiday:
 opening_hours:
   monday:
     - start: '11:00'
-      end: '15:00'
+      end: '16:00'
     - start: '18:00'
-      end: '22:00'
+      end: '23:00'
   tuesday:
     - start: '11:00'
-      end: '15:00'
+      end: '16:00'
     - start: '18:00'
-      end: '22:00'
+      end: '23:00'
   wednesday: []
   thursday:
     - start: '11:00'
-      end: '15:00'
+      end: '16:00'
     - start: '18:00'
-      end: '22:00'
+      end: '23:00'
   friday:
     - start: '11:00'
-      end: '15:00'
+      end: '16:00'
     - start: '18:00'
-      end: '22:00'
+      end: '23:00'
   saturday:
     - start: '11:00'
-      end: '15:00'
+      end: '16:00'
     - start: '18:00'
-      end: '22:00'
+      end: '23:00'
   sunday:
     - start: '11:00'
-      end: '15:00'
+      end: '16:00'
     - start: '18:00'
-      end: '22:00'
+      end: '23:00'
   holiday:
     - start: '11:00'
-      end: '15:00'
+      end: '16:00'
     - start: '18:00'
-      end: '22:00'
+      end: '23:00'
 has_parking: false
 hard_noodle_enabled: true
+twitter: meguro_jiro
+last_update: 2026/01/11

@@ -1,47 +1,46 @@
-id: 38
+id: 54
 kind: origin
-name: 札幌店
+name: 仙台店2
 status: open
-prefecture: hokkaido
-address: 札幌市北区北6条西8-8-11
+old_id: 36
+prefecture: miyagi
+address: 仙台市青葉区一番町2丁目5-32
 location:
-  lat: 43.0673817
-  lng: 141.3438818
-regular_holiday:
-  - sunday
-  - holiday
+  lat: 38.2593876
+  lng: 140.8720885
+regular_holiday: [monday]
 opening_hours:
-  monday:
-    - start: '11:00'
-      end: '14:00'
-    - start: '17:00'
-      end: '21:00'
+  monday: []
   tuesday:
     - start: '11:00'
-      end: '14:00'
+      end: '14:30'
     - start: '17:00'
       end: '21:00'
   wednesday:
     - start: '11:00'
-      end: '14:00'
+      end: '14:30'
     - start: '17:00'
       end: '21:00'
   thursday:
     - start: '11:00'
-      end: '14:00'
+      end: '14:30'
     - start: '17:00'
       end: '21:00'
   friday:
     - start: '11:00'
-      end: '14:00'
+      end: '14:30'
     - start: '17:00'
       end: '21:00'
   saturday:
     - start: '11:00'
-      end: '15:00'
-  sunday: []
-  holiday: []
+      end: '21:00'
+  sunday:
+    - start: '11:00'
+      end: '21:00'
+  holiday:
+    - start: '11:00'
+      end: '21:00'
 has_parking: false
 hard_noodle_enabled: true
-twitter: jiro_sapporo_
+twitter: jiro_sendai1023
 last_update: 2026/01/11

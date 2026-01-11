@@ -12,25 +12,27 @@ regular_holiday:
 opening_hours:
   monday:
     - start: '11:30'
-      end: '27:00'
+      end: '26:30'
   tuesday:
     - start: '11:30'
-      end: '27:00'
+      end: '26:30'
   wednesday: []
   thursday:
     - start: '11:30'
-      end: '27:00'
+      end: '26:30'
   friday:
     - start: '11:30'
-      end: '27:00'
+      end: '26:30'
   saturday:
     - start: '11:30'
-      end: '27:00'
+      end: '26:30'
   sunday:
     - start: '11:30'
-      end: '27:00'
+      end: '26:30'
   holiday:
     - start: '11:30'
-      end: '27:00'
+      end: '26:30'
 has_parking: false
 hard_noodle_enabled: true
+twitter: kabujiikeji
+last_update: 2026/01/11

@@ -8,28 +8,31 @@ location:
   lat: 35.7282363
   lng: 139.7138991
 regular_holiday:
-  - monday
-  - monday
-  - holiday
-  - sunday
+  - tuesday
 opening_hours:
-  monday: []
-  tuesday:
+  monday:
     - start: '11:00'
-      end: '23:00'
+      end: '15:30'
+  tuesday: []
   wednesday:
     - start: '11:00'
-      end: '23:00'
+      end: '15:30'
   thursday:
     - start: '11:00'
-      end: '23:00'
+      end: '15:30'
   friday:
     - start: '11:00'
-      end: '23:00'
+      end: '15:30'
   saturday:
     - start: '11:00'
-      end: '23:00'
-  sunday: []
-  holiday: []
+      end: '15:30'
+  sunday:
+    - start: '11:00'
+      end: '15:30'
+  holiday:
+    - start: '11:00'
+      end: '15:30'
 has_parking: false
 hard_noodle_enabled: true
+twitter: ikejikabuji
+last_update: 2026/01/11
