@@ -7,4 +7,6 @@ window.onload = async () => {
         }
         document.getElementById('shop-list').innerHTML += `<li class="list-group-item"><a href="detail.html?id=${e.id}">${shopName}</a></li>`;
     });
+    const lastUpdate = await (await fetch('last_update.json')).json();
+    document.getElementById('last-update').innerText = `最終更新: ${lastUpdate.last_update}`;
 };

@@ -31,4 +31,8 @@ window.onload = async () => {
             document.getElementById('business-hours').appendChild(li);
         }
     });
+    const lastUpdate = data.last_update;
+    if (lastUpdate) {
+      document.getElementById('last-update').innerText = `最終更新: ${lastUpdate}`;
+    }
 };
