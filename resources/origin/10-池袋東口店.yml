@@ -8,10 +8,7 @@ location:
   lat: 35.7282363
   lng: 139.7138991
 regular_holiday:
-  - monday
-  - monday
-  - holiday
-  - sunday
+  - tuesday
 opening_hours:
   monday:
     - start: '11:00'
