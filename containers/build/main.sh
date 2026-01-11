@@ -27,3 +27,4 @@ files=$(ls)
 
 mkdir -p ${DEST}
 yq -s -c '. | del(.[].other) | sort_by(.id)' $files > "${DEST}/origin.json"
+echo "{\"last_update\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}" | jq -rc . > "${DEST}/last_update.json"
