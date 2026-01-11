@@ -5,6 +5,6 @@ window.onload = async () => {
         if (e.status == 'closed') {
             shopName += ' (閉店)';
         }
-        document.getElementById('shop-list').innerHTML += `<li><a href="detail.html?id=${e.id}">${shopName}</a></li>`;
+        document.getElementById('shop-list').innerHTML += `<li class="list-group-item"><a href="detail.html?id=${e.id}">${shopName}</a></li>`;
     });
 };
