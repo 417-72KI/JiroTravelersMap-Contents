@@ -27,3 +27,4 @@ files=$(ls)
 
 mkdir -p ${DEST}
 yq -s -c '. | del(.[].other) | sort_by(.id)' $files > "${DEST}/origin.json"
+jq -c '{shop_list: ., last_update: (now | strftime("%Y/%m/%d"))}' "${DEST}/origin.json" > "${DEST}/index.json"
