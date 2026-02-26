@@ -23,7 +23,7 @@ jobs:
       - name: validate yml
         run: docker compose run --rm validate
       - name: upload artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: public
           path: public
