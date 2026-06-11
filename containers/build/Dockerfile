@@ -1,4 +1,4 @@
-FROM python@sha256:2081144b23b38daa7fae3b7ee4b42cf2f858d88b0452736274aafaba96f3a6b6
+FROM python@sha256:90d5306545870da68636de2a12ba9132388714fb5f7077cb914c0e30a96d7de4
 
 RUN apt-get update \
     && apt-get install -y jq
