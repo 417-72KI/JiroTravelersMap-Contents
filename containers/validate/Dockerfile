@@ -1,4 +1,4 @@
-FROM 41772ki/swift-mint:6.3@sha256:a2bac682c92e099739c880ef332e46eb98a5cb48403f4be77c86509a852a65f8
+FROM 41772ki/swift-mint:6.3
 
 ADD . /jtmcvalidator
 WORKDIR /jtmcvalidator

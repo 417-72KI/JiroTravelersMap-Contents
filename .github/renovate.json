@@ -2,5 +2,13 @@
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
         "github>417-72KI/renovate-config"
+    ],
+    "packageRules": [
+        {
+            "matchCategories": ["docker"],
+            "matchPackageNames": ["/^41772ki\//"],
+            "enabled": true,
+            "digest": {"enabled": false}
+        }
     ]
 }
