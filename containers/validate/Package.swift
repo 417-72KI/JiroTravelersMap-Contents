@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "JiroTravelersMapContentsValidator",
+    platforms: [.macOS(.v15)],
     products: [
         .executable(
             name: "jtmcvalidator",
@@ -14,6 +15,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.8.2"),
         .package(url: "https://github.com/kylef/PathKit.git", from: "1.0.1"),
+        .package(url: "https://github.com/417-72KI/JiroTravelersMap-Model", branch: "main"),
     ],
     targets: [
         .executableTarget(
@@ -21,13 +23,10 @@ let package = Package(
             dependencies: [
                 "JiroTravelersMapContentsValidatorCore",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
-                "PathKit"
+                "PathKit",
+                .product(name: "JiroTravelersMapModel", package: "JiroTravelersMap-Model"),
             ]
         ),
         .target(name: "JiroTravelersMapContentsValidatorCore"),
-        .testTarget(
-            name: "JiroTravelersMapContentsValidatorCoreTests",
-            dependencies: ["JiroTravelersMapContentsValidatorCore"]
-        ),
     ]
 )

@@ -1,6 +1,15 @@
 {
-  "originHash" : "bd2f17591d2045045539870e787ea93ccbf273926ed057ba3afc4674ba2e17bd",
+  "originHash" : "7746660bf088e1fd5dbe7e292b9b10894513f8842ab2df86d555d40c94ceb082",
   "pins" : [
+    {
+      "identity" : "jirotravelersmap-model",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/417-72KI/JiroTravelersMap-Model",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3f53ff03a91b5b02bf95489cfc97d04a1a9aee22"
+      }
+    },
     {
       "identity" : "pathkit",
       "kind" : "remoteSourceControl",
