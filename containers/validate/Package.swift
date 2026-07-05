@@ -21,12 +21,10 @@ let package = Package(
         .executableTarget(
             name: "JiroTravelersMapContentsValidator",
             dependencies: [
-                "JiroTravelersMapContentsValidatorCore",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 "PathKit",
                 .product(name: "JiroTravelersMapModel", package: "JiroTravelersMap-Model"),
             ]
         ),
-        .target(name: "JiroTravelersMapContentsValidatorCore"),
     ]
 )

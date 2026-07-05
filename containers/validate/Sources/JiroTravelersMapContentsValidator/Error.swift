@@ -1,6 +1,5 @@
 import Foundation
 @preconcurrency import PathKit
-import JiroTravelersMapContentsValidatorCore
 import JiroTravelersMapModel
 
 enum Error: Swift.Error {

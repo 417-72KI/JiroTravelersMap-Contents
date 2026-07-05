@@ -1,7 +1,6 @@
 import Foundation
 import ArgumentParser
 import PathKit
-import JiroTravelersMapContentsValidatorCore
 import JiroTravelersMapModel
 
 @main
