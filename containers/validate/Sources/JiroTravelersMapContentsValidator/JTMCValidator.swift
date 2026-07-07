@@ -1,7 +1,7 @@
 import Foundation
 import ArgumentParser
 import PathKit
-import JiroTravelersMapContentsValidatorCore
+import JiroTravelersMapModel
 
 @main
 struct JTMCValidator: ParsableCommand {
@@ -13,14 +13,7 @@ struct JTMCValidator: ParsableCommand {
         guard path.exists else { throw Error.fileNotFound(path.absolute()) }
         guard path.isFile else { throw Error.directory(path.absolute()) }
         let data = try Data(contentsOf: path.url)
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        decoder.dateDecodingStrategy = .formatted(DateFormatter().apply {
-            $0.locale = Locale(identifier: "ja_JP")
-            $0.timeZone = TimeZone(identifier: "Asia/Tokyo")
-            $0.dateFormat = "yyyy/MM/dd"
-        })
-        let shops = try decoder.decode([Shop].self, from: data)
+        let shops = try Shop.decodeArray(from: data)
 
         var validationError = ValidationError()
 
