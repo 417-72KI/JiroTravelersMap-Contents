@@ -42,5 +42,6 @@ opening_hours:
       end: '15:00'
 has_parking: true
 hard_noodle_enabled: true
+twitter: mejirodai_jiro
 ramen_db_link: https://ramendb.supleks.jp/s/99697.html
 last_update: 2026/07/08

@@ -30,6 +30,7 @@ opening_hours:
   sunday: []
 has_parking: false
 hard_noodle_enabled: true
+twitter: koiwajiro
 ramen_db_link: https://ramendb.supleks.jp/s/3387.html
 note: |
   土曜はテイクアウトのみ

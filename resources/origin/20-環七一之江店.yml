@@ -42,6 +42,7 @@ opening_hours:
       end: '14:00'
 has_parking: false
 hard_noodle_enabled: true
+twitter: ichinoejiro
 ramen_db_link: https://ramendb.supleks.jp/s/1124.html
 note: |
   夜営業は不定期
