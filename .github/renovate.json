@@ -8,6 +8,8 @@
             "matchCategories": ["docker"],
             "matchPackageNames": ["/^41772ki\//"],
             "enabled": true,
+            "pin": { "enabled": false },
+            "pinDigests": { "enabled": false },
             "digest": {"enabled": false}
         }
     ]
