@@ -48,3 +48,4 @@ opening_hours:
       end: '20:00'
 has_parking: false
 hard_noodle_enabled: true
+ramen_db_link: https://ramendb.supleks.jp/s/120613.html
