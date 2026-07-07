@@ -9,39 +9,28 @@ location:
   lng: 139.4766227
 regular_holiday:
   - monday
-  - thursday
 opening_hours:
   monday: []
   tuesday:
     - start: '11:00'
-      end: '14:00'
-    - start: '18:00'
-      end: '21:00'
+      end: '20:00'
   wednesday:
     - start: '11:00'
-      end: '14:00'
-    - start: '18:00'
-      end: '21:00'
-  thursday: []
+      end: '20:00'
+  thursday:
+    - start: '11:00'
+      end: '20:00'
   friday:
     - start: '11:00'
-      end: '14:00'
-    - start: '18:00'
-      end: '21:00'
+      end: '20:00'
   saturday:
     - start: '11:00'
-      end: '14:00'
-    - start: '18:00'
-      end: '21:00'
+      end: '20:00'
   sunday:
     - start: '11:00'
       end: '14:00'
-    - start: '18:00'
-      end: '21:00'
-  holiday:
-    - start: '11:00'
-      end: '14:00'
-    - start: '18:00'
-      end: '21:00'
 has_parking: false
 hard_noodle_enabled: true
+twitter: kwge26
+ramen_db_link: https://ramendb.supleks.jp/s/97949.html
+last_update: 2026/07/08

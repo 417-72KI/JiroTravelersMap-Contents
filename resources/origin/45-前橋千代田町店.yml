@@ -12,39 +12,33 @@ regular_holiday:
 opening_hours:
   monday: []
   tuesday:
-    - start: '11:00'
+    - start: '10:30'
       end: '14:30'
     - start: '17:00'
       end: '20:00'
   wednesday:
-    - start: '11:00'
+    - start: '10:30'
       end: '14:30'
-    - start: '17:00'
-      end: '20:00'
   thursday:
-    - start: '11:00'
+    - start: '10:30'
       end: '14:30'
-    - start: '17:00'
-      end: '20:00'
   friday:
-    - start: '11:00'
+    - start: '10:30'
       end: '14:30'
     - start: '17:00'
       end: '20:00'
   saturday:
-    - start: '11:00'
+    - start: '10:30'
       end: '14:30'
     - start: '17:00'
       end: '20:00'
   sunday:
-    - start: '11:00'
-      end: '14:30'
-    - start: '17:00'
-      end: '20:00'
-  holiday:
-    - start: '11:00'
+    - start: '10:30'
       end: '14:30'
     - start: '17:00'
       end: '20:00'
 has_parking: false
 hard_noodle_enabled: true
+twitter: SnBZt6eRCdz7lQw
+ramen_db_link: https://ramendb.supleks.jp/s/120613.html
+last_update: 2026/07/08

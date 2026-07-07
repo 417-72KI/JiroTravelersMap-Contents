@@ -8,37 +8,40 @@ location:
   lat: 35.6389428
   lng: 139.3122151
 regular_holiday:
-  - sunday
   - thursday
   - holiday
 opening_hours:
   monday:
-    - start: '11:30'
+    - start: '11:00'
       end: '14:30'
-    - start: '18:00'
-      end: '21:00'
+    - start: '17:30'
+      end: '20:30'
   tuesday:
-    - start: '11:30'
+    - start: '11:00'
       end: '14:30'
-    - start: '18:00'
-      end: '21:00'
+    - start: '17:30'
+      end: '20:30'
   wednesday:
-    - start: '11:30'
+    - start: '11:00'
       end: '14:30'
-    - start: '18:00'
-      end: '21:00'
+    - start: '17:30'
+      end: '20:30'
   thursday: []
   friday:
-    - start: '11:30'
+    - start: '11:00'
       end: '14:30'
-    - start: '18:00'
-      end: '21:00'
+    - start: '17:30'
+      end: '20:30'
   saturday:
-    - start: '11:30'
+    - start: '11:00'
       end: '14:30'
-    - start: '18:00'
-      end: '21:00'
-  sunday: []
-  holiday: []
+    - start: '17:30'
+      end: '20:30'
+  sunday:
+    - start: '11:00'
+      end: '15:00'
 has_parking: true
 hard_noodle_enabled: true
+twitter: mejirodai_jiro
+ramen_db_link: https://ramendb.supleks.jp/s/99697.html
+last_update: 2026/07/08

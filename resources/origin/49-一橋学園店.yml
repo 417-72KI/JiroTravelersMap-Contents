@@ -40,6 +40,8 @@ opening_hours:
   sunday:
     - start: '11:00'
       end: '16:00'
-  holiday: []
 has_parking: false
 hard_noodle_enabled: true
+twitter: 1284jiro
+ramen_db_link: https://ramendb.supleks.jp/s/142777.html
+last_update: 2026/07/08

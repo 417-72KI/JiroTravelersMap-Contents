@@ -8,7 +8,7 @@ address: 仙台市青葉区一番町2丁目5-32
 location:
   lat: 38.2593876
   lng: 140.8720885
-regular_holiday: [monday]
+regular_holiday: []
 opening_hours:
   monday: []
   tuesday:
@@ -43,4 +43,5 @@ opening_hours:
 has_parking: false
 hard_noodle_enabled: true
 twitter: jiro_sendai1023
-last_update: 2026/01/11
+ramen_db_link: https://ramendb.supleks.jp/s/164808.html
+last_update: 2026/07/08

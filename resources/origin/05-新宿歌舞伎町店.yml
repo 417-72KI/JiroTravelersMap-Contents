@@ -7,32 +7,45 @@ address: 新宿区歌舞伎町2-37-5 日新ビル 1F
 location:
   lat: 35.6961574
   lng: 139.701929
-regular_holiday:
-  - wednesday
+regular_holiday: []
 opening_hours:
   monday:
     - start: '11:30'
+      end: '15:00'
+    - start: '17:00'
       end: '26:30'
   tuesday:
     - start: '11:30'
+      end: '15:00'
+    - start: '17:00'
       end: '26:30'
-  wednesday: []
+  wednesday:
+    - start: '11:30'
+      end: '15:00'
+    - start: '17:00'
+      end: '26:30'
   thursday:
     - start: '11:30'
+      end: '15:00'
+    - start: '17:00'
       end: '26:30'
   friday:
     - start: '11:30'
+      end: '15:00'
+    - start: '17:00'
       end: '26:30'
   saturday:
     - start: '11:30'
+      end: '15:00'
+    - start: '17:00'
       end: '26:30'
   sunday:
     - start: '11:30'
-      end: '26:30'
-  holiday:
-    - start: '11:30'
+      end: '15:00'
+    - start: '17:00'
       end: '26:30'
 has_parking: false
 hard_noodle_enabled: true
 twitter: kabujiikeji
-last_update: 2026/01/11
+ramen_db_link: https://ramendb.supleks.jp/s/95249.html
+last_update: 2026/07/08

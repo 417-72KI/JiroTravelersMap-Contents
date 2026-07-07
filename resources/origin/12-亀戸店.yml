@@ -12,27 +12,27 @@ opening_hours:
   monday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:00'
+    - start: '17:30'
       end: '21:00'
   tuesday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:00'
+    - start: '17:30'
       end: '21:00'
   wednesday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:00'
+    - start: '17:30'
       end: '21:00'
   thursday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:00'
+    - start: '17:30'
       end: '21:00'
   friday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:00'
+    - start: '17:30'
       end: '21:00'
   saturday:
     - start: '11:00'
@@ -42,12 +42,10 @@ opening_hours:
   sunday:
     - start: '11:00'
       end: '14:30'
-  holiday:
-    - start: '11:00'
-      end: '14:30'
-    - start: '17:00'
+    - start: '17:30'
       end: '21:00'
 has_parking: false
 hard_noodle_enabled: true
 twitter: jiro_kame
-last_update: 2026/01/06
+ramen_db_link: https://ramendb.supleks.jp/s/1302.html
+last_update: 2026/07/08

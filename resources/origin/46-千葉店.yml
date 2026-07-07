@@ -9,8 +9,6 @@ location:
   lng: 140.1236034
 regular_holiday:
   - sunday
-  - holiday
-  - sunday
 opening_hours:
   monday:
     - start: '11:00'
@@ -43,6 +41,8 @@ opening_hours:
     - start: '17:00'
       end: '21:30'
   sunday: []
-  holiday: []
 has_parking: false
 hard_noodle_enabled: true
+twitter: jiro_chiba
+ramen_db_link: https://ramendb.supleks.jp/s/124574.html
+last_update: 2026/07/08

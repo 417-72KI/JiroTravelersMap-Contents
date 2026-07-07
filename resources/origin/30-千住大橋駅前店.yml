@@ -8,34 +8,28 @@ location:
   lat: 35.742555
   lng: 139.797066
 regular_holiday:
-  - sunday
   - thursday
-  - holiday
-  - saturday
+  - sunday
 opening_hours:
   monday:
-    - start: '11:00'
-      end: '17:00'
-    - start: '11:00'
-      end: '14:00'
+    - start: '10:30'
+      end: '15:30'
   tuesday:
-    - start: '11:00'
-      end: '17:00'
-    - start: '11:00'
-      end: '14:00'
+    - start: '10:30'
+      end: '15:30'
   wednesday:
-    - start: '11:00'
-      end: '17:00'
-    - start: '11:00'
-      end: '14:00'
+    - start: '10:30'
+      end: '15:30'
   thursday: []
   friday:
-    - start: '11:00'
-      end: '17:00'
-    - start: '11:00'
-      end: '14:00'
+    - start: '10:30'
+      end: '15:30'
   saturday: []
   sunday: []
-  holiday: []
 has_parking: false
 hard_noodle_enabled: true
+twitter: senjujirou26
+ramen_db_link: https://ramendb.supleks.jp/s/19341.html
+note: |
+  土曜日15:00頃〜テイクアウトのみ営業
+last_update: 2026/07/08
