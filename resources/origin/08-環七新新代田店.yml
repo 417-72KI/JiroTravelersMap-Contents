@@ -7,39 +7,30 @@ address: 世田谷区代田5-29
 location:
   lat: 35.6619043
   lng: 139.6604156
-regular_holiday:
-  - monday
-  - holiday
-  - sunday
+regular_holiday: []
 opening_hours:
-  monday: []
+  monday:
+    - start: '11:00'
+      end: '15:00'
   tuesday:
     - start: '11:00'
-      end: '14:00'
-    - start: '17:00'
-      end: '20:00'
+      end: '15:00'
   wednesday:
     - start: '11:00'
-      end: '14:00'
-    - start: '17:00'
-      end: '20:00'
+      end: '15:00'
   thursday:
     - start: '11:00'
-      end: '14:00'
-    - start: '17:00'
-      end: '20:00'
+      end: '15:00'
   friday:
     - start: '11:00'
-      end: '14:00'
-    - start: '17:00'
-      end: '20:00'
+      end: '15:00'
   saturday:
     - start: '11:00'
-      end: '14:00'
-    - start: '17:00'
-      end: '20:00'
-  sunday: []
-  holiday: []
+      end: '15:00'
+  sunday:
+    - start: '11:00'
+      end: '15:00'
 has_parking: false
 hard_noodle_enabled: true
 ramen_db_link: https://ramendb.supleks.jp/s/75362.html
+last_update: 2026/07/08

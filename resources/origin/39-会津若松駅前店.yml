@@ -8,14 +8,9 @@ location:
   lat: 37.5066266
   lng: 139.9314173
 regular_holiday:
-  - sunday
-  - holiday
+  - monday
 opening_hours:
-  monday:
-    - start: '11:00'
-      end: '14:00'
-    - start: '17:00'
-      end: '21:00'
+  monday: []
   tuesday:
     - start: '11:00'
       end: '14:00'
@@ -38,11 +33,19 @@ opening_hours:
       end: '21:00'
   saturday:
     - start: '11:00'
-      end: '14:00'
-    - start: '17:00'
-      end: '21:00'
-  sunday: []
-  holiday: []
+      end: '15:00'
+  sunday:
+    - start: '11:00'
+      end: '15:00'
+  holiday:
+    - start: '11:00'
+      end: '15:00'
 has_parking: false
 hard_noodle_enabled: true
+twitter: aizu_jiro
 ramen_db_link: https://ramendb.supleks.jp/s/77820.html
+note: |
+  日曜は第2、4日曜のみ営業
+  第1・3・5日曜日は定休
+  祝日不定休
+last_update: 2026/07/08

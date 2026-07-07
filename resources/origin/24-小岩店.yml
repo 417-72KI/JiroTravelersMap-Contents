@@ -8,28 +8,29 @@ location:
   lat: 35.7349589
   lng: 139.8800087
 regular_holiday:
+  - monday
   - saturday
   - sunday
   - holiday
 opening_hours:
-  monday:
-    - start: '10:30'
-      end: '15:00'
+  monday: []
   tuesday:
     - start: '10:30'
-      end: '15:00'
+      end: '14:30'
   wednesday:
     - start: '10:30'
-      end: '15:00'
+      end: '14:30'
   thursday:
     - start: '10:30'
-      end: '15:00'
+      end: '14:30'
   friday:
     - start: '10:30'
-      end: '15:00'
+      end: '14:30'
   saturday: []
   sunday: []
-  holiday: []
 has_parking: false
 hard_noodle_enabled: true
 ramen_db_link: https://ramendb.supleks.jp/s/3387.html
+note: |
+  土曜はテイクアウトのみ
+last_update: 2026/07/08

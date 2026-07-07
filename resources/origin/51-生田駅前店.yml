@@ -42,11 +42,8 @@ opening_hours:
       end: '15:00'
     - start: '18:00'
       end: '21:00'
-  holiday:
-    - start: '11:00'
-      end: '15:00'
-    - start: '18:00'
-      end: '21:00'
 has_parking: false
 hard_noodle_enabled: true
+twitter: ikuta_jiro
 ramen_db_link: https://ramendb.supleks.jp/s/149549.html
+last_update: 2026/07/08

@@ -21,7 +21,11 @@ opening_hours:
       end: '14:30'
     - start: '17:30'
       end: '21:00'
-  wednesday: []
+  wednesday:
+    - start: '11:00'
+      end: '14:30'
+    - start: '17:30'
+      end: '21:00'
   thursday:
     - start: '11:00'
       end: '14:30'
@@ -42,3 +46,4 @@ opening_hours:
 has_parking: false
 hard_noodle_enabled: true
 ramen_db_link: https://ramendb.supleks.jp/s/135329.html
+last_update: 2026/07/08

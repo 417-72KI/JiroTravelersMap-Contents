@@ -29,11 +29,8 @@ opening_hours:
   sunday:
     - start: '11:00'
       end: '15:30'
-  holiday:
-    - start: '11:00'
-      end: '15:30'
 has_parking: false
 hard_noodle_enabled: true
 twitter: ikejikabuji
 ramen_db_link: https://ramendb.supleks.jp/s/67.html
-last_update: 2026/01/11
+last_update: 2026/07/08
