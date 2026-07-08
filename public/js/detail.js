@@ -34,6 +34,16 @@ window.onload = async () => {
             document.getElementById('business-hours').appendChild(li);
         }
     });
+    const twitter = data.twitter;
+    if (twitter) {
+        const twitterLink = document.createElement('a');
+        twitterLink.href = `https://twitter.com/${twitter}`;
+        twitterLink.target = '_blank';
+        twitterLink.innerText = `@${twitter}`;
+        document.getElementById('twitter').appendChild(twitterLink);
+    } else {
+        document.getElementById('sns_container').style.display = 'none';
+    }
     const lastUpdate = data.last_update;
     if (lastUpdate) {
       document.getElementById('last-update').innerText = `最終更新: ${lastUpdate}`;
