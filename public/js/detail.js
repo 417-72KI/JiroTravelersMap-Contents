@@ -1,3 +1,6 @@
+import { prefectures, days, dayOfWeek } from './const.js';
+import './util.mjs';
+
 window.onload = async () => {
     const origin = await (await fetch('origin.json')).json();
     const data = origin.find(element => element.id == new URLSearchParams(window.location.search).get('id'));
@@ -13,7 +16,7 @@ window.onload = async () => {
     } else {
         document.getElementById('address').innerText = address;
     }
-    const holiday = data.regular_holiday.map(e => dayOfWeek[e]).join('、');
+    const holiday = data.regular_holiday.ifEmpty('無し', (arr) => arr.map(e => dayOfWeek[e]).join('、'));
     document.getElementById('holiday').innerText = holiday;
     days.forEach(e => {
         const dayInfo = data.opening_hours[e];
@@ -31,6 +34,17 @@ window.onload = async () => {
             document.getElementById('business-hours').appendChild(li);
         }
     });
+    const twitter = data.twitter;
+    if (twitter) {
+        const twitterLink = document.createElement('a');
+        twitterLink.href = `https://twitter.com/${twitter}`;
+        twitterLink.target = '_blank';
+        twitterLink.rel = 'noopener noreferrer';
+        twitterLink.innerText = `@${twitter}`;
+        document.getElementById('twitter').appendChild(twitterLink);
+    } else {
+        document.getElementById('sns_container').style.display = 'none';
+    }
     const lastUpdate = data.last_update;
     if (lastUpdate) {
       document.getElementById('last-update').innerText = `最終更新: ${lastUpdate}`;

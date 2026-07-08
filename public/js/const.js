@@ -69,3 +69,5 @@ const dayOfWeek = {
     saturday: "土",
     holiday: "祝",
 };
+
+export { prefectures, days, dayOfWeek };
