@@ -9,7 +9,7 @@
             "matchPackageNames": ["/^41772ki\//"],
             "enabled": true,
             "pin": { "enabled": false },
-            "pinDigests": { "enabled": false },
+            "pinDigests": false,
             "digest": {"enabled": false}
         }
     ]
