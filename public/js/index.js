@@ -1,4 +1,4 @@
-window.onload = async () => {
+const initializeShopList = async () => {
   const origin = await (await fetch('origin.json')).json();
   origin.forEach(e => {
     var shopName = e.name;
@@ -22,3 +22,5 @@ window.onload = async () => {
   };
   document.getElementById('last-update').innerText = `最終更新: ${formatDate(lastUpdate.last_update)}`;
 };
+
+window.addEventListener('load', initializeShopList);
