@@ -39,6 +39,7 @@ window.onload = async () => {
         const twitterLink = document.createElement('a');
         twitterLink.href = `https://twitter.com/${twitter}`;
         twitterLink.target = '_blank';
+        twitterLink.rel = 'noopener noreferrer';
         twitterLink.innerText = `@${twitter}`;
         document.getElementById('twitter').appendChild(twitterLink);
     } else {
