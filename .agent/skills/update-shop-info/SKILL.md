@@ -38,7 +38,7 @@ description: ラーメンデータベース（RDB）等の情報を元に、Jiro
   2. 曜日 + `不定休`（例: `祝日不定休`, `水曜不定休`）は、その曜日を `regular_holiday` に追加せず `note` に記載する。
   3. それ以外の曜日・曜日範囲（例: `日曜`, `日曜、祝日`, `月〜木`）は曜日配列（英小文字: `monday`〜`sunday`, `holiday`）に展開して `regular_holiday` に追加する。
   4. 複数ケースが混在する場合は、1〜3を各要素に独立して適用する。
-     - 例: `日曜・祝日不定休` → `日曜` はルール3を適用して `regular_holiday` に `sunday` を追加し、`祝日不定休` はルール2を適用して `holiday` は `regular_holiday` に追加せず `note` に記載する（結果: `regular_holiday: [sunday]`、`note: '祝日不定休'`）。
+    - 例: `日曜・祝日不定休` → `日曜` はルール3を適用して `regular_holiday` に `sunday` を追加し、`祝日不定休` はルール2を適用して `holiday` は `regular_holiday` に追加せず `note` に記載する（結果: `regular_holiday: [sunday]`、`note: '祝日不定休'`）。
 - 配列内の重複値は禁止。
 
 ### 2.3 営業時間（opening_hours）
@@ -100,21 +100,26 @@ description: ラーメンデータベース（RDB）等の情報を元に、Jiro
 店舗情報の更新・バリデーションが完了したら、以下の手順に従ってコミットを行う：
 
 1. **ブランチの作成**:
-   - 更新対象に応じたトピックブランチ（例: `update-{店舗識別名}`）を新規作成して切り替える。
-   ```bash
-   git checkout -b update-{shop-name}
-   ```
+  - 更新対象に応じたトピックブランチを新規作成して切り替える。
+    - 1店舗のみの場合は`update-{店舗識別名}`
+      ```bash
+      git checkout -b update-{shop-name}
+      ```
+    - 複数店舗を同時に更新する場合は`update-{更新日付}`
+      ```bash
+      git checkout -b update-{yyyyMMdd}
+      ```
 2. **変更ファイルのステージング**:
-   - 更新した店舗 YAML ファイルのみをステージングする。
-   ```bash
-   git add resources/origin/{NN}-{店舗名}.yml
-   ```
+  - 更新した店舗 YAML ファイルのみをステージングする。
+  ```bash
+  git add resources/origin/{NN}-{店舗名}.yml
+  ```
 3. **コミットの作成**:
-   - コミットメッセージは**シンプルな英語**で記述する（例: `Update {Shop Name} shop info`）。
-   ```bash
-   git commit -m "Update {Shop Name} shop info"
-   ```
-
+  - コミットメッセージは**シンプルな英語**で記述する（例: `Update {Shop Name} shop info`）。
+  ```bash
+  git commit -m "Update {Shop Name} shop info"
+  ```
+4. **2-3を更新した店舗数分繰り返す**
 ---
 
 ## 6. Push & Pull Request 作成手順
@@ -122,24 +127,25 @@ description: ラーメンデータベース（RDB）等の情報を元に、Jiro
 コミット完了後、リモートへの Push および Pull Request 作成を行う：
 
 1. **ユーザー確認（必須）**:
-   - **`git push` を実行する前に、必ずユーザーに Push を行ってよいか確認を取る**（ユーザーの承認を得るまで Push は実行しない）。
+  - **`git push` を実行する前に、必ずユーザーに Push を行ってよいか確認を取る**（ユーザーの承認を得るまで Push は実行しない）。
 2. **リモートへの Push**:
-   - ユーザーの承認後、ブランチを Push する。
-   ```bash
-   git push -u origin update-{shop-name}
-   ```
+  - ユーザーの承認後、ブランチを Push する。
+  ```bash
+  git push -u origin update-{shop-name/yyyyMMdd}
+  ```
 3. **Pull Request の作成**:
-   - GitHub CLI（`gh`）を使用して `main` ブランチ宛てに PR を作成する。
-   - タイトルおよび本文（Summary, Verification）は**英語**で記述する。
-   ```bash
-   gh pr create --base main --head update-{shop-name} \
-     --title "Update {Shop Name} shop info" \
-     --body "## Summary
-   Updated {Shop Name} shop information (opening hours and last update).
+  - GitHub CLI（`gh`）を使用して `main` ブランチ宛てに PR を作成する。
+  - タイトルおよび本文（Summary, Verification）は**英語**で記述する。
+    - タイトルは1店舗のみの場合は `Update {Shop Name} shop info`、複数店舗の場合は `Update shops {yyyy/MM/dd}` とする。
+  ```bash
+  gh pr create --base main --head update-{shop-name/yyyyMMdd} \
+    --title "Update {Shop Name} shop info" \
+    --body "## Summary
+  Updated {Shop Name} shop information (opening hours and last update).
 
-   - Opening hours: ...
-   - `last_update`: YYYY/MM/DD
+  - Opening hours: ...
+  - `last_update`: YYYY/MM/DD
 
-   ## Verification
-   - Passed `make validate`"
-   ```
+  ## Verification
+  - Passed `make validate`"
+  ```
