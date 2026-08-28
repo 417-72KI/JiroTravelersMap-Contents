@@ -72,8 +72,10 @@ description: ラーメンデータベース（RDB）等の情報を元に、Jiro
 ## 3. 更新手順
 
 1. **情報収集**: ラーメンデータベース等の店舗ページから、営業時間・定休日・Twitter・URL等の最新情報を確認・取得する。
-2. **YAMLファイル編集**: セクション2の抽出・変換ルール、および [.github/copilot-instructions.md](../../.github/copilot-instructions.md) のキー順・フォーマットに従って `resources/origin/{NN}-{店舗名}.yml` を編集する。
-3. **バリデーション実行**: 次のチェックリストおよび検証ツールで内容を確認する。
+2. **YAMLファイル編集**: セクション2の抽出・変換ルール、および `.github/copilot-instructions.md` のキー順・フォーマットに従って `resources/origin/{NN}-{店舗名}.yml` を編集する。
+3. **バリデーション実行**: セクション4のチェックリストおよび検証ツール（`make validate`）で内容を確認する。
+4. **コミット実行**: セクション5の手順に従い、ブランチの作成とコミットを行う。
+5. **Push & PR作成**: セクション6の手順に従い、ユーザーに確認を取った上でリモートへ Push し、Pull Request を作成する。
 
 ---
 
@@ -90,3 +92,54 @@ description: ラーメンデータベース（RDB）等の情報を元に、Jiro
 - [ ] 不定休情報がある場合、`note` が `ramen_db_link` の直下に設定されているか
 - [ ] 更新した場合、`last_update` が当日の `YYYY/MM/DD` に更新されているか
 - [ ] （利用可能な場合）バリデーションコマンド等（例: `make validate`）が通るか
+
+---
+
+## 5. コミット手順
+
+店舗情報の更新・バリデーションが完了したら、以下の手順に従ってコミットを行う：
+
+1. **ブランチの作成**:
+   - 更新対象に応じたトピックブランチ（例: `update-{店舗識別名}`）を新規作成して切り替える。
+   ```bash
+   git checkout -b update-{shop-name}
+   ```
+2. **変更ファイルのステージング**:
+   - 更新した店舗 YAML ファイルのみをステージングする。
+   ```bash
+   git add resources/origin/{NN}-{店舗名}.yml
+   ```
+3. **コミットの作成**:
+   - コミットメッセージは**シンプルな英語**で記述する（例: `Update {Shop Name} shop info`）。
+   ```bash
+   git commit -m "Update {Shop Name} shop info"
+   ```
+
+---
+
+## 6. Push & Pull Request 作成手順
+
+コミット完了後、リモートへの Push および Pull Request 作成を行う：
+
+1. **ユーザー確認（必須）**:
+   - **`git push` を実行する前に、必ずユーザーに Push を行ってよいか確認を取る**（ユーザーの承認を得るまで Push は実行しない）。
+2. **リモートへの Push**:
+   - ユーザーの承認後、ブランチを Push する。
+   ```bash
+   git push -u origin update-{shop-name}
+   ```
+3. **Pull Request の作成**:
+   - GitHub CLI（`gh`）を使用して `main` ブランチ宛てに PR を作成する。
+   - タイトルおよび本文（Summary, Verification）は**英語**で記述する。
+   ```bash
+   gh pr create --base main --head update-{shop-name} \
+     --title "Update {Shop Name} shop info" \
+     --body "## Summary
+   Updated {Shop Name} shop information (opening hours and last update).
+
+   - Opening hours: ...
+   - `last_update`: YYYY/MM/DD
+
+   ## Verification
+   - Passed `make validate`"
+   ```
