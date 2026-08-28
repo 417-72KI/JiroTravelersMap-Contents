@@ -27,8 +27,8 @@ description: ラーメンデータベース（RDB）等の情報を元に、Jiro
 
 ### 2.1 ramen_db_link
 - 店舗ページURL（`https://ramendb.supleks.jp/s/{id}.html`）を `ramen_db_link` に格納する。
-- 配置順は `twitter` の直下とし、`note` がある場合はその直前、`note` がない場合は `last_update` の直前とする。`last_update` がない場合はファイル末尾とする。
-- 対象店舗のRDBページが存在しない、またはページが404の場合は `ramen_db_link` キーを追加しない（既存になければ省略）。
+- 配置順は `twitter` がある場合はその直下、ない場合は `hard_noodle_enabled` の直下とし、`note` がある場合はその直前、`note` がない場合は `last_update` の直前とする。`last_update` がない場合はファイル末尾とする。
+- RDBページが見つからない／404の場合は `ramen_db_link` を省略・削除せず、更新作業を中断してURLを確認する（既存値がある場合は維持する）。
 
 ### 2.2 定休日（regular_holiday）
 - 店舗ページの「定休日」欄から変換する。
