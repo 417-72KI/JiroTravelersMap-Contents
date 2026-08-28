@@ -31,7 +31,7 @@
 任意キー
 - twitter: string（X/Twitter アカウントID。`@` なし）
 - note: string（不定休など補足情報）
-- last_update: string（`YYYY/MM/DD`）
+- last_update: string（JSTを基準とする日付。フォーマットは`YYYY/MM/DD`）
 
 ## 3. 推奨キー順
 
