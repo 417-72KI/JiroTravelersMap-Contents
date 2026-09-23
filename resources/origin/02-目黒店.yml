@@ -19,7 +19,11 @@ opening_hours:
       end: '16:00'
     - start: '18:00'
       end: '23:00'
-  wednesday: []
+  wednesday:
+    - start: '11:00'
+      end: '16:00'
+    - start: '18:00'
+      end: '23:00'
   thursday:
     - start: '11:00'
       end: '16:00'
@@ -44,4 +48,4 @@ has_parking: false
 hard_noodle_enabled: true
 twitter: meguro_jiro
 ramen_db_link: https://ramendb.supleks.jp/s/1414.html
-last_update: 2026/07/08
+last_update: 2026/09/24
