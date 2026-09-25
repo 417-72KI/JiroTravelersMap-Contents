@@ -27,9 +27,9 @@ jobs:
           context: ./containers/validate
           cache-from: type=local,src=/tmp/.buildx-cache/validate
           cache-to: type=local,dest=/tmp/.buildx-cache-new/validate,mode=max
-      - name: build json from yml
+      - name: Build JSON from YML
         run: docker compose run --rm build
-      - name: validate json
+      - name: Validate JSON
         run: docker compose run --rm validate
       - name: Cleanup cache
         run: |
