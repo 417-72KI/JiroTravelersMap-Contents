@@ -60,4 +60,5 @@ jobs:
       if: github.ref == 'refs/heads/main'
       run: firebase deploy --only hosting
     - name: Cleanup
+      if: always()
       run: rm $GOOGLE_APPLICATION_CREDENTIALS
