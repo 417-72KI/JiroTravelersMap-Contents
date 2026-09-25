@@ -37,7 +37,7 @@ opening_hours:
   sunday:
     - start: '10:00'
       end: '15:00'
-  holiday:
+  holiday: []
 has_parking: false
 hard_noodle_enabled: true
 twitter: sumo_jiro
