@@ -23,12 +23,12 @@ jobs:
         with:
           context: ./containers/build
           cache-from: type=local,src=/tmp/.buildx-cache/build
-          cache-to: type=local,dest=/tmp/.buildx-cache/build,mode=max
+          cache-to: type=local,dest=/tmp/.buildx-cache-new/build,mode=max
       - uses: docker/build-push-action@v7
         with:
           context: ./containers/validate
           cache-from: type=local,src=/tmp/.buildx-cache/validate
-          cache-to: type=local,dest=/tmp/.buildx-cache/validate,mode=max
+          cache-to: type=local,dest=/tmp/.buildx-cache-new/validate,mode=max
       - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
           path: |
@@ -48,6 +48,10 @@ jobs:
         with:
           name: public
           path: public
+      - name: Cleanup cache
+        run: |
+          rm -rf /tmp/.buildx-cache
+          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
   deploy:
     needs: build_and_validate
     runs-on: ubuntu-latest

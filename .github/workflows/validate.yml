@@ -21,13 +21,17 @@ jobs:
         with:
           context: ./containers/build
           cache-from: type=local,src=/tmp/.buildx-cache/build
-          cache-to: type=local,dest=/tmp/.buildx-cache/build,mode=max
+          cache-to: type=local,dest=/tmp/.buildx-cache-new/build,mode=max
       - uses: docker/build-push-action@v7
         with:
           context: ./containers/validate
           cache-from: type=local,src=/tmp/.buildx-cache/validate
-          cache-to: type=local,dest=/tmp/.buildx-cache/validate,mode=max
+          cache-to: type=local,dest=/tmp/.buildx-cache-new/validate,mode=max
       - name: build json from yml
         run: docker compose run --rm build
       - name: validate json
         run: docker compose run --rm validate
+      - name: Cleanup cache
+        run: |
+          rm -rf /tmp/.buildx-cache
+          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
