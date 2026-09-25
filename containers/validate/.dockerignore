@@ -1,1 +1,4 @@
 .build
+!.build/checkouts
+!.build/artifacts
+!.build/repositories
