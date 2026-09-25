@@ -1,12 +1,37 @@
 name: Validate
 on:
   pull_request: {}
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - name: build json from yml
+      - uses: actions/cache@v6
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ hashFiles('**/Dockerfile') }}-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-${{ hashFiles('**/Dockerfile') }}-
+            ${{ runner.os }}-buildx-
+      - uses: docker/setup-buildx-action@v4
+      - uses: docker/build-push-action@v7
+        with:
+          context: ./containers/build
+          cache-from: type=local,src=/tmp/.buildx-cache/build
+          cache-to: type=local,dest=/tmp/.buildx-cache-new/build,mode=max
+      - uses: docker/build-push-action@v7
+        with:
+          context: ./containers/validate
+          cache-from: type=local,src=/tmp/.buildx-cache/validate
+          cache-to: type=local,dest=/tmp/.buildx-cache-new/validate,mode=max
+      - name: Build JSON from YML
         run: docker compose run --rm build
-      - name: validate json
+      - name: Validate JSON
         run: docker compose run --rm validate
+      - name: Cleanup cache
+        run: |
+          rm -rf /tmp/.buildx-cache
+          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
