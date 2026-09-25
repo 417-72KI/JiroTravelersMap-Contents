@@ -2,7 +2,7 @@ name: Validate
 on:
   pull_request: {}
 jobs:
-  validate:
+  cache-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -12,11 +12,22 @@ jobs:
           context: ./containers/build
           cache-from: type=gha
           cache-to: type=gha,mode=max
+  cache-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: docker/setup-buildx-action@v4
       - uses: docker/build-push-action@v7
         with:
           context: ./containers/validate
           cache-from: type=gha
           cache-to: type=gha,mode=max
+  validate:
+    needs: [cache-build, cache-validate]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: docker/setup-buildx-action@v4
       - name: build json from yml
         run: docker compose run --rm build
       - name: validate json
