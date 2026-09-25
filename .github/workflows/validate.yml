@@ -11,12 +11,12 @@ jobs:
         with:
           context: ./containers/build
           cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-to: type=gha,mode=max,scope=validate-build
       - uses: docker/build-push-action@v7
         with:
           context: ./containers/validate
           cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-to: type=gha,mode=max,scope=validate-validate
       - name: build json from yml
         run: docker compose run --rm build
       - name: validate json
