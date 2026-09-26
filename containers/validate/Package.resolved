@@ -1,5 +1,5 @@
 {
-  "originHash" : "7746660bf088e1fd5dbe7e292b9b10894513f8842ab2df86d555d40c94ceb082",
+  "originHash" : "97e55aa60a2b2d0f558e160ad8a4c25d51f0e4405d462abdb2ad18230f0d4671",
   "pins" : [
     {
       "identity" : "jirotravelersmap-model",
@@ -8,24 +8,6 @@
       "state" : {
         "branch" : "main",
         "revision" : "3f53ff03a91b5b02bf95489cfc97d04a1a9aee22"
-      }
-    },
-    {
-      "identity" : "pathkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kylef/PathKit.git",
-      "state" : {
-        "revision" : "3bfd2737b700b9a36565a8c94f4ad2b050a5e574",
-        "version" : "1.0.1"
-      }
-    },
-    {
-      "identity" : "spectre",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kylef/Spectre.git",
-      "state" : {
-        "revision" : "26cc5e9ae0947092c7139ef7ba612e34646086c7",
-        "version" : "0.10.1"
       }
     },
     {
