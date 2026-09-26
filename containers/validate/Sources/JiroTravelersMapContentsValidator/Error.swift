@@ -1,10 +1,9 @@
 import Foundation
-@preconcurrency import PathKit
 import JiroTravelersMapModel
 
 enum Error: Swift.Error {
-    case fileNotFound(Path)
-    case directory(Path)
+    case fileNotFound(FilePath)
+    case directory(FilePath)
     case invalidHours([(Shop, [(Day, [Shop.OpeningHours.Time])])])
     case conflictIds([(Shop, Shop)])
     case conflictNames([(Shop, Shop)])
