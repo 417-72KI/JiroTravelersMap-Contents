@@ -9,7 +9,6 @@ location:
   lng: 139.3122151
 regular_holiday:
   - thursday
-  - holiday
 opening_hours:
   monday:
     - start: '11:00'
@@ -44,4 +43,5 @@ has_parking: true
 hard_noodle_enabled: true
 twitter: mejirodai_jiro
 ramen_db_link: https://ramendb.supleks.jp/s/99697.html
-last_update: 2026/07/08
+note: 祝日不定休
+last_update: 2026/10/01

@@ -11,32 +11,32 @@ regular_holiday:
   - sunday
 opening_hours:
   monday:
-    - start: '11:30'
-      end: '14:45'
+    - start: '12:00'
+      end: '15:00'
     - start: '18:00'
       end: '21:00'
   tuesday:
-    - start: '11:30'
-      end: '14:45'
+    - start: '12:00'
+      end: '15:00'
     - start: '18:00'
       end: '21:00'
   wednesday:
-    - start: '11:30'
-      end: '14:45'
+    - start: '12:00'
+      end: '15:00'
     - start: '18:00'
       end: '21:00'
   thursday:
-    - start: '11:30'
-      end: '14:45'
+    - start: '12:00'
+      end: '15:00'
     - start: '18:00'
       end: '21:00'
   friday:
-    - start: '11:30'
-      end: '14:45'
+    - start: '12:00'
+      end: '15:00'
     - start: '18:00'
       end: '21:00'
   saturday:
-    - start: '11:30'
+    - start: '12:00'
       end: '16:00'
   sunday: []
   holiday: []
@@ -44,4 +44,5 @@ has_parking: true
 hard_noodle_enabled: true
 twitter: Tochigikaidoten
 ramen_db_link: https://ramendb.supleks.jp/s/12524.html
-last_update: 2026/01/06
+note: '祝祭日不定休'
+last_update: 2026/09/30

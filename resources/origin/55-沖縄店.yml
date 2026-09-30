@@ -33,14 +33,16 @@ opening_hours:
       end: '20:00'
   saturday:
     - start: '11:00'
-      end: '14:00'
-    - start: '17:00'
-      end: '20:00'
+      end: '15:00'
   sunday:
+    - start: '11:00'
+      end: '15:00'
+  holiday:
     - start: '11:00'
       end: '15:00'
 has_parking: false
 hard_noodle_enabled: false
 twitter: okinawa_jiro
 ramen_db_link: https://ramendb.supleks.jp/s/173581.html
-last_update: 2026/07/08
+note: 材料がなくなり次第早締めの可能性あり
+last_update: 2026/09/30

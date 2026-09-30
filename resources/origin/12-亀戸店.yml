@@ -12,40 +12,41 @@ opening_hours:
   monday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
+    - start: '17:00'
       end: '21:00'
   tuesday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
+    - start: '17:00'
       end: '21:00'
   wednesday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
+    - start: '17:00'
       end: '21:00'
   thursday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
+    - start: '17:00'
       end: '21:00'
   friday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
+    - start: '17:00'
       end: '21:00'
   saturday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
+    - start: '17:00'
       end: '21:00'
   sunday:
     - start: '11:00'
       end: '14:30'
-    - start: '17:30'
+    - start: '17:00'
       end: '21:00'
 has_parking: false
 hard_noodle_enabled: true
 twitter: jiro_kame
 ramen_db_link: https://ramendb.supleks.jp/s/1302.html
-last_update: 2026/07/08
+note: 不定休
+last_update: 2026/10/01

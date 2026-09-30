@@ -9,7 +9,6 @@ location:
   lng: 139.8800087
 regular_holiday:
   - monday
-  - saturday
   - sunday
   - holiday
 opening_hours:
@@ -26,12 +25,15 @@ opening_hours:
   friday:
     - start: '10:30'
       end: '14:30'
-  saturday: []
+  saturday:
+    - start: '10:30'
+      end: '14:30'
   sunday: []
+  holiday: []
 has_parking: false
 hard_noodle_enabled: true
 twitter: koiwajiro
 ramen_db_link: https://ramendb.supleks.jp/s/3387.html
 note: |
   土曜はテイクアウトのみ
-last_update: 2026/07/08
+last_update: 2026/09/30
