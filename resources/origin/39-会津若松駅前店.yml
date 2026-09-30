@@ -34,12 +34,18 @@ opening_hours:
   saturday:
     - start: '11:00'
       end: '15:00'
+    - start: '17:00'
+      end: '20:00'
   sunday:
     - start: '11:00'
       end: '15:00'
+    - start: '17:00'
+      end: '20:00'
   holiday:
     - start: '11:00'
       end: '15:00'
+    - start: '17:00'
+      end: '20:00'
 has_parking: false
 hard_noodle_enabled: true
 twitter: aizu_jiro
@@ -48,4 +54,4 @@ note: |
   日曜は第2、4日曜のみ営業
   第1・3・5日曜日は定休
   祝日不定休
-last_update: 2026/07/08
+last_update: 2026/10/01

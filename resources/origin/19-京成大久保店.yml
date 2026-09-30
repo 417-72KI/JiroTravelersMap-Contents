@@ -1,7 +1,7 @@
 id: 19
 kind: origin
 name: 京成大久保店
-status: open
+status: closed
 prefecture: chiba
 address: 船橋市三山2-1-11
 location:
@@ -33,5 +33,9 @@ opening_hours:
   holiday: []
 has_parking: false
 hard_noodle_enabled: true
-twitter: mayunabegumi
+twitter: OKB26
 ramen_db_link: https://ramendb.supleks.jp/s/4731.html
+note: |
+  2026年7月25日に初代店主引退。二代目店主による営業再開時期・営業時間・定休日は未定（公式X @OKB26 参照）
+  旧営業情報アカウント@mayunabegumiは初代店主引退に伴い解散
+last_update: 2026/10/01

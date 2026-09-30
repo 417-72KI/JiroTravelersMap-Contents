@@ -39,8 +39,11 @@ opening_hours:
   sunday:
     - start: '11:00'
       end: '15:00'
+  holiday:
+    - start: '11:00'
+      end: '15:00'
 has_parking: false
 hard_noodle_enabled: true
 twitter: omiyapark26
 ramen_db_link: https://ramendb.supleks.jp/s/125117.html
-last_update: 2026/07/08
+last_update: 2026/10/01

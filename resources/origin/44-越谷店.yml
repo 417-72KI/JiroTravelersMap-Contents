@@ -11,29 +11,29 @@ regular_holiday: []
 opening_hours:
   monday:
     - start: '11:00'
-      end: '14:30'
-    - start: '17:30'
-      end: '20:30'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:00'
   tuesday:
     - start: '11:00'
-      end: '14:30'
-    - start: '17:30'
-      end: '20:30'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:00'
   wednesday:
     - start: '11:00'
-      end: '14:30'
-    - start: '17:30'
-      end: '20:30'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:00'
   thursday:
     - start: '11:00'
-      end: '14:30'
-    - start: '17:30'
-      end: '20:30'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:00'
   friday:
     - start: '11:00'
-      end: '14:30'
-    - start: '17:30'
-      end: '20:30'
+      end: '14:00'
+    - start: '17:00'
+      end: '20:00'
   saturday:
     - start: '10:00'
       end: '14:30'
@@ -44,4 +44,5 @@ has_parking: false
 hard_noodle_enabled: true
 twitter: ksgy26
 ramen_db_link: https://ramendb.supleks.jp/s/115782.html
-last_update: 2026/07/08
+note: 不定休。夏時間(10月末頃まで)適用中。営業日は公式Xで確認。
+last_update: 2026/10/01

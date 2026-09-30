@@ -33,4 +33,5 @@ has_parking: false
 hard_noodle_enabled: true
 twitter: ikejikabuji
 ramen_db_link: https://ramendb.supleks.jp/s/67.html
-last_update: 2026/08/29
+note: 火曜が祝日の場合は水曜振替休
+last_update: 2026/10/01

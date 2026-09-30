@@ -9,38 +9,40 @@ location:
   lng: 139.6747901
 regular_holiday:
   - sunday
-  - holiday
 opening_hours:
   monday:
-    - start: '11:00'
+    - start: '10:15'
       end: '13:30'
-    - start: '17:30'
+    - start: '17:15'
       end: '20:30'
   tuesday:
-    - start: '11:00'
+    - start: '10:15'
       end: '13:30'
-    - start: '17:30'
+    - start: '17:15'
       end: '20:30'
   wednesday:
-    - start: '11:00'
+    - start: '10:15'
       end: '13:30'
   thursday:
-    - start: '11:00'
+    - start: '10:15'
       end: '13:30'
-    - start: '17:30'
+    - start: '17:15'
       end: '20:30'
   friday:
-    - start: '11:00'
+    - start: '10:15'
       end: '13:30'
-    - start: '17:30'
+    - start: '17:15'
       end: '20:30'
   saturday:
-    - start: '09:30'
-      end: '12:30'
+    - start: '09:15'
+      end: '14:00'
   sunday: []
+  holiday:
+    - start: '10:15'
+      end: '13:30'
 has_parking: false
 hard_noodle_enabled: false
 has_spoon: false
 twitter: jiro_nishidai
 ramen_db_link: https://ramendb.supleks.jp/s/113862.html
-last_update: 2026/07/08
+last_update: 2026/10/01
