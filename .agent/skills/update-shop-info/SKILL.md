@@ -156,9 +156,6 @@ p = OGParser(); p.feed(sys.stdin.read()); print(p.result)
 
 店舗情報の更新・バリデーションが完了したら、以下の手順に従ってコミットを行う：
 
-0. **コミット前に必ず `git status` を確認する**:
-  - 過去の作業やサブエージェントの操作で、今回のスコープ外のファイルが既に `git add` 済み（ステージング済み）になっている場合がある。`git commit` は明示的にpathspecを渡さない限り**インデックス全体**をコミットしてしまうため、意図しないファイルが混入していないか必ず確認する。
-  - 混入を避けるには、`git add` したファイルのみを確実にコミットできる pathspec 指定コミット（例: `git commit -m "..." -- resources/origin/{NN}-{店舗名}.yml`）を使うか、コミット直後に `git show --stat HEAD` で対象ファイルのみが含まれているか検証する。
 1. **ブランチの作成**:
   - 更新対象に応じたトピックブランチを新規作成して切り替える。
     - 1店舗のみの場合は`update-{店舗識別名}`
@@ -169,22 +166,20 @@ p = OGParser(); p.feed(sys.stdin.read()); print(p.result)
       ```bash
       git checkout -b update-{yyyyMMdd}
       ```
-2. **変更ファイルのステージング**:
-  - 更新した店舗 YAML ファイルのみをステージングする。
-  ```bash
-  git add resources/origin/{NN}-{店舗名}.yml
-  ```
-3. **コミットの作成**:
+2. **コミットの作成**:
   - コミットメッセージは**シンプルな英語**で記述する。
   - **1店舗のみの更新**: `Update {Shop Name} shop info`
     ```bash
-    git commit -m "Update {Shop Name} shop info"
+    git commit -m "Update {Shop Name} shop info" 'resources/origin/{NN}-{店舗名}.yml'
     ```
-  - **複数店舗を同時に更新した場合**: 特に指示がなければ、更新した全ファイルをまとめて**1コミット**にする（メッセージ例: `Update shops {yyyy/MM/dd}`）。店舗ごとに個別コミットを分けたい場合はユーザーに確認するか、明示的に指示された場合のみ店舗数分繰り返す。
+  - **複数店舗を同時に更新した場合**: 特に指示がなければ、更新した全ファイルをまとめて**1コミット**にする（メッセージ例: `Update shops {yyyy/MM/dd}`）。
     ```bash
-    git add resources/origin/{NN1}-{店舗名1}.yml resources/origin/{NN2}-{店舗名2}.yml ...
-    git commit -m "Update shops {yyyy/MM/dd}"
+    git commit -m "Update shops {yyyy/MM/dd}" 'resources/origin/*.yml'
     ```
+    - 店舗ごとに個別コミットを分けたい場合はユーザーに確認するか、明示的に指示された場合のみ店舗数分繰り返す。
+      ```bash
+      git commit -m "Update shops {yyyy/MM/dd}" 'resources/origin/{NN1}-{店舗名1}.yml' 'resources/origin/{NN2}-{店舗名2}.yml' ...
+      ```
 ---
 
 ## 6. Push & Pull Request 作成手順
