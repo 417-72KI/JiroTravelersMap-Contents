@@ -119,7 +119,7 @@ p = OGParser(); p.feed(sys.stdin.read()); print(p.result)
 - 店舗公式アカウントが「解散」「アカウント変更」等で切り替わっている場合は、`twitter` キーを新アカウントに更新し、経緯を `note` に残す。
 
 ### 2.8 閉店（status: closed）への変更
-- 店主交代・長期休業等でユーザーから `closed` への変更を指示された場合、既存の閉店店舗ファイル（例: `35-新橋店.yml` 等）の慣例に合わせる：
+- 店主交代・長期休業等でユーザーから `closed` への変更を指示された場合
   - `status` のみを `closed` に変更し、`opening_hours` / `regular_holiday` / `twitter` は閉店直前（最後に確認できた）情報をそのまま履歴として保持し、削除・書き換えしない。
   - **`note` と `last_update` は必ず残す**（閉店の経緯・確認日時を記録するため）。既存の `note` / `last_update` がある場合は削除せずそのまま維持し、経緯を追記する場合は `note` に追記し、`last_update` を当日の日付に更新する。
 
