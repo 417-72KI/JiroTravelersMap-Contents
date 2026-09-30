@@ -175,12 +175,8 @@ p = OGParser(); p.feed(sys.stdin.read()); print(p.result)
     ```
   - **複数店舗を同時に更新した場合**: 特に指示がなければ、更新した全ファイルをまとめて**1コミット**にする（メッセージ例: `Update shops {yyyy/MM/dd}`）。
     ```bash
-    git commit -m "Update shops {yyyy/MM/dd}" 'resources/origin/*.yml'
+    git commit -m "Update shops {yyyy/MM/dd}" 'resources/origin/{NN1}-{店舗名1}.yml' 'resources/origin/{NN2}-{店舗名2}.yml' ...
     ```
-    - 店舗ごとに個別コミットを分けたい場合はユーザーに確認するか、明示的に指示された場合のみ店舗数分繰り返す。
-      ```bash
-      git commit -m "Update shops {yyyy/MM/dd}" 'resources/origin/{NN1}-{店舗名1}.yml' 'resources/origin/{NN2}-{店舗名2}.yml' ...
-      ```
 ---
 
 ## 6. Push & Pull Request 作成手順
