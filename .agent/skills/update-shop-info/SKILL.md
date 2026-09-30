@@ -15,10 +15,17 @@ description: ラーメンデータベース（RDB）等の情報を元に、Jiro
 
 営業時間・定休日の最新情報は **まず店舗公式Xのbioを確認し、記載が無い場合にRDBを参照する**（優先順位の詳細は 2.7 を参照）。
 
+- **重要**: いずれの取得も `curl -s` はHTTPエラー（4xx/5xx）でも終了コード0を返すため、`curl | python3 ...` のようにパイプで直接パースすると、取得失敗と「bioに情報が無い」ケースを区別できない（`pipefail`が無い限りパイプ全体の終了コードもPython側のものになる）。**必ず `-o` でファイルに保存しつつ `-w "%{http_code}"` でHTTPステータスコードを取得し、`200` であることを確認してからパースする**。ステータスが`200`以外の場合は「bioに記載が無い」とは扱わず、取得失敗として処理を中断・報告する（2.7節のRDBフォールバックはHTTP取得が成功した上で記載が無い場合にのみ適用する）。
 - **X（旧Twitter）**: `WebFetch` は `https://x.com/...` に対して 402 Payment Required となり使用できない。プロフィールページ・個別ツイートページとも通常の `curl` 取得ではJS描画前のHTMLしか得られず本文は見えないが、**`<meta property="og:description">` にはプロフィールのbio（固定のお知らせ文を含む）や個別ツイートの本文がサーバーサイドで埋め込まれている**ため、これを抽出すれば取得できる。単純な `grep` の正規表現は属性順序の違いで取りこぼすことがあるため、HTMLパーサーを使うこと。
   ```bash
-  curl -sSk -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" \
-    "https://x.com/{handle}" | python3 -c "
+  http_code=$(curl -sSk -o "$TMPDIR/{handle}.html" -w "%{http_code}" \
+    -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" \
+    "https://x.com/{handle}")
+  if [ "$http_code" != "200" ]; then
+    echo "fetch failed: https://x.com/{handle} -> $http_code" >&2
+    # 取得失敗。「bioに記載が無い」として扱わず、原因を確認してから先に進む。
+  else
+    python3 -c "
 import sys
 from html.parser import HTMLParser
 class OGParser(HTMLParser):
@@ -27,26 +34,33 @@ class OGParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         if tag == 'meta' and dict(attrs).get('property') == 'og:description':
             self.result = dict(attrs).get('content', '')
-p = OGParser(); p.feed(sys.stdin.read()); print(p.result)
+p = OGParser()
+with open('$TMPDIR/{handle}.html', encoding='utf-8', errors='ignore') as f:
+    p.feed(f.read())
+print(p.result)
 "
+  fi
   ```
   - プロフィールページの `og:description` = アカウントのbio（固定のお知らせがあればそれが最優先で表示される）。
   - 個別ツイートページ（`https://x.com/{handle}/status/{id}`）の `og:description` = そのツイート本文。直近の複数ツイートを確認したい場合は `WebSearch` で該当アカウントのツイートURLを検索してから個別に取得する。
   - Nitter等の非公式ミラー経由での取得は行わないこと（利用規約上不適切）。
 - **ラーメンデータベース（RDB）**（Xのbioに記載が無い場合のフォールバック）: `WebFetch` ツールは `https://ramendb.supleks.jp/...` に対して 403 Forbidden となり使用できない。代わりに `curl` で取得する。
   ```bash
-  curl -sSk -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" \
-    "https://ramendb.supleks.jp/s/{id}.html" -o /path/to/out.html
+  http_code=$(curl -sSk -o /path/to/out.html -w "%{http_code}" \
+    -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36" \
+    "https://ramendb.supleks.jp/s/{id}.html")
+  [ "$http_code" = "200" ] || echo "fetch failed: $http_code" >&2
   ```
   - ブラウザ相当の User-Agent を付与すること。
   - サンドボックス環境ではプロキシの自己署名証明書によりSSL検証エラーになるため `-k` を付与する。
   - Bashツール呼び出し時は `allowed_domains` に `ramendb.supleks.jp` を指定する。
   - 営業時間・定休日は `<table id="shop-data-table">` 内の `<th>営業時間</th>` `<th>定休日</th>` 行から抽出できる。
-- 多数のアカウント/店舗をまとめて処理する場合、**zshでは `for h in $handles`（未クォート変数展開）は単語分割されず1つの単語として扱われる**ため、以下のようにヒアドキュメント＋`while read`で1行ずつ処理すること。
+- 多数のアカウント/店舗をまとめて処理する場合、**zshでは `for h in $handles`（未クォート変数展開）は単語分割されず1つの単語として扱われる**ため、以下のようにヒアドキュメント＋`while read`で1行ずつ処理すること。各handleのHTTPステータスも記録し、`200`以外は取得失敗として個別に確認する。
   ```bash
   while IFS= read -r h; do
     [ -z "$h" ] && continue
-    curl -sSk -A "..." "https://x.com/${h}" -o "$TMPDIR/${h}.html"
+    code=$(curl -sSk -o "$TMPDIR/${h}.html" -w "%{http_code}" -A "..." "https://x.com/${h}")
+    echo "$h: $code"
   done <<'EOF'
   handle1
   handle2
