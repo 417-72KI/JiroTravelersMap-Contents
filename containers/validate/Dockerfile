@@ -1,4 +1,4 @@
-FROM 41772ki/swift-mint:6.3
+FROM 41772ki/swift-mint:6.4
 
 ADD . /jtmcvalidator
 WORKDIR /jtmcvalidator
